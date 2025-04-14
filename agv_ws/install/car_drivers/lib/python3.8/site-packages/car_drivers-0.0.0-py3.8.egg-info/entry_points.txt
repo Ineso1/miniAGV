@@ -1,0 +1,3 @@
+[console_scripts]
+move_drivers = car_drivers.move_drivers:main
+

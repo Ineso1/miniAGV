@@ -1,0 +1,5 @@
+[console_scripts]
+controller = control.controller:main
+odometry = control.odometry:main
+trajectory = control.trajectory:main
+

@@ -1,0 +1,38 @@
+running egg_info
+creating ../../build/car_drivers/car_drivers.egg-info
+writing ../../build/car_drivers/car_drivers.egg-info/PKG-INFO
+writing dependency_links to ../../build/car_drivers/car_drivers.egg-info/dependency_links.txt
+writing entry points to ../../build/car_drivers/car_drivers.egg-info/entry_points.txt
+writing requirements to ../../build/car_drivers/car_drivers.egg-info/requires.txt
+writing top-level names to ../../build/car_drivers/car_drivers.egg-info/top_level.txt
+writing manifest file '../../build/car_drivers/car_drivers.egg-info/SOURCES.txt'
+reading manifest file '../../build/car_drivers/car_drivers.egg-info/SOURCES.txt'
+writing manifest file '../../build/car_drivers/car_drivers.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /root/Documents/robot/miniAGV/agv_ws/build/car_drivers/build
+creating /root/Documents/robot/miniAGV/agv_ws/build/car_drivers/build/lib
+creating /root/Documents/robot/miniAGV/agv_ws/build/car_drivers/build/lib/car_drivers
+copying car_drivers/move_drivers.py -> /root/Documents/robot/miniAGV/agv_ws/build/car_drivers/build/lib/car_drivers
+copying car_drivers/__init__.py -> /root/Documents/robot/miniAGV/agv_ws/build/car_drivers/build/lib/car_drivers
+running install
+running install_lib
+creating /root/Documents/robot/miniAGV/agv_ws/install/car_drivers/lib/python3.8/site-packages/car_drivers
+copying /root/Documents/robot/miniAGV/agv_ws/build/car_drivers/build/lib/car_drivers/move_drivers.py -> /root/Documents/robot/miniAGV/agv_ws/install/car_drivers/lib/python3.8/site-packages/car_drivers
+copying /root/Documents/robot/miniAGV/agv_ws/build/car_drivers/build/lib/car_drivers/__init__.py -> /root/Documents/robot/miniAGV/agv_ws/install/car_drivers/lib/python3.8/site-packages/car_drivers
+byte-compiling /root/Documents/robot/miniAGV/agv_ws/install/car_drivers/lib/python3.8/site-packages/car_drivers/move_drivers.py to move_drivers.cpython-38.pyc
+byte-compiling /root/Documents/robot/miniAGV/agv_ws/install/car_drivers/lib/python3.8/site-packages/car_drivers/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /root/Documents/robot/miniAGV/agv_ws/install/car_drivers/share/ament_index
+creating /root/Documents/robot/miniAGV/agv_ws/install/car_drivers/share/ament_index/resource_index
+creating /root/Documents/robot/miniAGV/agv_ws/install/car_drivers/share/ament_index/resource_index/packages
+copying resource/car_drivers -> /root/Documents/robot/miniAGV/agv_ws/install/car_drivers/share/ament_index/resource_index/packages
+copying package.xml -> /root/Documents/robot/miniAGV/agv_ws/install/car_drivers/share/car_drivers
+creating /root/Documents/robot/miniAGV/agv_ws/install/car_drivers/share/car_drivers/launch
+creating /root/Documents/robot/miniAGV/agv_ws/install/car_drivers/share/car_drivers/params
+copying params/imu_filter_param.yaml -> /root/Documents/robot/miniAGV/agv_ws/install/car_drivers/share/car_drivers/params
+running install_egg_info
+Copying ../../build/car_drivers/car_drivers.egg-info to /root/Documents/robot/miniAGV/agv_ws/install/car_drivers/lib/python3.8/site-packages/car_drivers-0.0.0-py3.8.egg-info
+running install_scripts
+Installing move_drivers script to /root/Documents/robot/miniAGV/agv_ws/install/car_drivers/lib/car_drivers
+writing list of installed files to '/root/Documents/robot/miniAGV/agv_ws/build/car_drivers/install.log'
