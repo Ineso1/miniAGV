@@ -3,9 +3,6 @@
 # Exit if any command fails
 set -e
 
-#linea para el driver que publica ou chet 
-#ros2 run yahboomcar_bringup Mcnamu_driver
-
 function error_exit {
     echo "Error: $1" >&2
     exit 1

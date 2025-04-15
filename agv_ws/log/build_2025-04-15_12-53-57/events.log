@@ -1,0 +1,227 @@
+[0.000000] (-) TimerEvent: {}
+[0.001634] (car_drivers) JobQueued: {'identifier': 'car_drivers', 'dependencies': OrderedDict()}
+[0.002184] (control) JobQueued: {'identifier': 'control', 'dependencies': OrderedDict()}
+[0.003734] (car_drivers) JobStarted: {'identifier': 'car_drivers'}
+[0.098440] (-) TimerEvent: {}
+[0.199444] (-) TimerEvent: {}
+[0.257641] (control) JobStarted: {'identifier': 'control'}
+[0.304432] (-) TimerEvent: {}
+[0.406182] (-) TimerEvent: {}
+[0.507813] (-) TimerEvent: {}
+[0.609423] (-) TimerEvent: {}
+[0.710537] (-) TimerEvent: {}
+[0.811543] (-) TimerEvent: {}
+[0.912571] (-) TimerEvent: {}
+[1.013644] (-) TimerEvent: {}
+[1.114757] (-) TimerEvent: {}
+[1.215828] (-) TimerEvent: {}
+[1.316956] (-) TimerEvent: {}
+[1.418039] (-) TimerEvent: {}
+[1.519264] (-) TimerEvent: {}
+[1.621728] (-) TimerEvent: {}
+[1.723661] (-) TimerEvent: {}
+[1.824785] (-) TimerEvent: {}
+[1.926052] (-) TimerEvent: {}
+[2.027334] (-) TimerEvent: {}
+[2.128502] (-) TimerEvent: {}
+[2.229499] (-) TimerEvent: {}
+[2.330596] (-) TimerEvent: {}
+[2.431729] (-) TimerEvent: {}
+[2.532936] (-) TimerEvent: {}
+[2.634024] (-) TimerEvent: {}
+[2.735123] (-) TimerEvent: {}
+[2.836233] (-) TimerEvent: {}
+[2.937717] (-) TimerEvent: {}
+[3.039117] (-) TimerEvent: {}
+[3.140236] (-) TimerEvent: {}
+[3.241366] (-) TimerEvent: {}
+[3.342669] (-) TimerEvent: {}
+[3.443882] (-) TimerEvent: {}
+[3.545080] (-) TimerEvent: {}
+[3.649679] (-) TimerEvent: {}
+[3.750992] (-) TimerEvent: {}
+[3.852425] (-) TimerEvent: {}
+[3.953786] (-) TimerEvent: {}
+[4.055231] (-) TimerEvent: {}
+[4.157075] (-) TimerEvent: {}
+[4.258148] (-) TimerEvent: {}
+[4.359305] (-) TimerEvent: {}
+[4.462398] (-) TimerEvent: {}
+[4.563467] (-) TimerEvent: {}
+[4.664597] (-) TimerEvent: {}
+[4.765665] (-) TimerEvent: {}
+[4.866831] (-) TimerEvent: {}
+[4.967849] (-) TimerEvent: {}
+[5.068906] (-) TimerEvent: {}
+[5.169967] (-) TimerEvent: {}
+[5.271189] (-) TimerEvent: {}
+[5.372752] (-) TimerEvent: {}
+[5.474282] (-) TimerEvent: {}
+[5.575375] (-) TimerEvent: {}
+[5.676505] (-) TimerEvent: {}
+[5.777574] (-) TimerEvent: {}
+[5.883830] (-) TimerEvent: {}
+[5.984839] (-) TimerEvent: {}
+[6.085868] (-) TimerEvent: {}
+[6.186931] (-) TimerEvent: {}
+[6.287994] (-) TimerEvent: {}
+[6.389137] (-) TimerEvent: {}
+[6.491233] (-) TimerEvent: {}
+[6.592478] (-) TimerEvent: {}
+[6.693695] (-) TimerEvent: {}
+[6.795575] (-) TimerEvent: {}
+[6.896779] (-) TimerEvent: {}
+[7.002038] (-) TimerEvent: {}
+[7.107369] (-) TimerEvent: {}
+[7.211525] (-) TimerEvent: {}
+[7.313563] (-) TimerEvent: {}
+[7.415619] (-) TimerEvent: {}
+[7.516932] (-) TimerEvent: {}
+[7.618106] (-) TimerEvent: {}
+[7.719207] (-) TimerEvent: {}
+[7.820336] (-) TimerEvent: {}
+[7.921458] (-) TimerEvent: {}
+[8.022672] (-) TimerEvent: {}
+[8.123812] (-) TimerEvent: {}
+[8.224908] (-) TimerEvent: {}
+[8.326850] (-) TimerEvent: {}
+[8.428198] (-) TimerEvent: {}
+[8.529453] (-) TimerEvent: {}
+[8.634085] (-) TimerEvent: {}
+[8.735357] (-) TimerEvent: {}
+[8.836567] (-) TimerEvent: {}
+[8.937636] (-) TimerEvent: {}
+[9.038674] (-) TimerEvent: {}
+[9.139749] (-) TimerEvent: {}
+[9.240867] (-) TimerEvent: {}
+[9.343206] (-) TimerEvent: {}
+[9.445207] (-) TimerEvent: {}
+[9.546404] (-) TimerEvent: {}
+[9.648160] (-) TimerEvent: {}
+[9.750752] (-) TimerEvent: {}
+[9.852684] (-) TimerEvent: {}
+[9.953831] (-) TimerEvent: {}
+[10.055018] (-) TimerEvent: {}
+[10.156264] (-) TimerEvent: {}
+[10.257387] (-) TimerEvent: {}
+[10.358698] (-) TimerEvent: {}
+[10.459810] (-) TimerEvent: {}
+[10.560908] (-) TimerEvent: {}
+[10.662305] (-) TimerEvent: {}
+[10.763519] (-) TimerEvent: {}
+[10.864646] (-) TimerEvent: {}
+[10.966188] (-) TimerEvent: {}
+[11.067755] (-) TimerEvent: {}
+[11.169636] (-) TimerEvent: {}
+[11.270912] (-) TimerEvent: {}
+[11.372083] (-) TimerEvent: {}
+[11.473967] (-) TimerEvent: {}
+[11.575909] (-) TimerEvent: {}
+[11.678738] (-) TimerEvent: {}
+[11.779942] (-) TimerEvent: {}
+[11.881064] (-) TimerEvent: {}
+[11.983124] (-) TimerEvent: {}
+[12.085869] (-) TimerEvent: {}
+[12.187934] (-) TimerEvent: {}
+[12.289349] (-) TimerEvent: {}
+[12.390772] (-) TimerEvent: {}
+[12.472779] (car_drivers) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/car_drivers', 'build', '--build-base', '/root/Documents/robot/miniAGV/agv_ws/build/car_drivers/build', 'install', '--record', '/root/Documents/robot/miniAGV/agv_ws/build/car_drivers/install.log', '--install-scripts', '$base/lib/car_drivers', '--single-version-externally-managed'], 'cwd': '/root/Documents/robot/miniAGV/agv_ws/src/car_drivers', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_US.UTF-8', 'USER': 'root', 'SSH_CLIENT': '192.168.0.9 36632 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/root/yahboomcar_ws/install/yahboomcar_msgs/lib:/root/yahboomcar_ws/install/yahboom_web_savmap_interfaces/lib:/root/yahboomcar_ws/install/robot_localization/lib:/root/software/nav2_ws/install/smac_planner/lib:/root/software/nav2_ws/install/nav2_controller/lib:/root/software/nav2_ws/install/dwb_plugins/lib:/root/software/nav2_ws/install/dwb_critics/lib:/root/software/nav2_ws/install/dwb_core/lib:/root/software/nav2_ws/install/nav_2d_utils/lib:/root/software/nav2_ws/install/dwb_msgs/lib:/root/software/nav2_ws/install/nav_2d_msgs/lib:/root/software/nav2_ws/install/nav2_waypoint_follower/lib:/root/software/nav2_ws/install/nav2_regulated_pure_pursuit_controller/lib:/root/software/nav2_ws/install/nav2_recoveries/lib:/root/software/nav2_ws/install/nav2_planner/lib:/root/software/nav2_ws/install/nav2_navfn_planner/lib:/root/software/nav2_ws/install/costmap_queue/lib:/root/software/nav2_ws/install/nav2_costmap_2d/lib:/root/software/nav2_ws/install/nav2_voxel_grid/lib:/root/software/nav2_ws/install/nav2_map_server/lib:/root/software/nav2_ws/install/nav2_lifecycle_manager/lib:/root/software/nav2_ws/install/nav2_bt_navigator/lib:/root/software/nav2_ws/install/nav2_behavior_tree/lib:/root/software/nav2_ws/install/nav2_amcl/lib:/root/software/nav2_ws/install/nav2_util/lib:/root/software/nav2_ws/install/nav2_msgs/lib:/root/software/library_ws/install/rosbridge_test_msgs/lib:/root/software/library_ws/install/rosbridge_msgs/lib:/root/software/library_ws/install/rosapi_msgs/lib:/root/software/library_ws/install/openslam_gmapping/lib:/root/software/library_ws/install/nav2_recoveries/lib:/root/software/library_ws/install/nav2_planner/lib:/root/software/library_ws/install/nav2_controller/lib:/root/software/library_ws/install/imu_filter_madgwick/lib:/root/software/library_ws/install/costmap_converter/lib:/root/software/library_ws/install/costmap_converter_msgs/lib:/root/software/library_ws/install/cartographer_ros_msgs/lib:/root/software/library_ws/install/astra_camera/lib:/root/software/library_ws/install/astra_camera_msgs/lib:/opt/tros/opt/yaml_cpp_vendor/lib:/opt/tros/lib:/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/root', 'OLDPWD': '/root/Documents/robot/miniAGV/agv_ws/src', 'SSH_TTY': '/dev/pts/1', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/0/bus', 'COLCON_PREFIX_PATH': '/root/Documents/robot/miniAGV/agv_ws/install:/root/software/nav2_ws/install:/root/software/library_ws/install:/root/yahboomcar_ws/install:/opt/tros', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'root', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/root/software/library_ws/install/cartographer/lib/aarch64-linux-gnu/pkgconfig:/root/software/library_ws/install/cartographer/lib/pkgconfig:/opt/tros/lib/x86_64-linux-gnu/pkgconfig:/opt/tros/lib/pkgconfig', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '2', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/root/software/library_ws/install/oradar_lidar/bin:/root/software/library_ws/install/costmap_converter/bin:/root/software/library_ws/install/cartographer/bin:/opt/tros/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_DOMAIN_ID': '32', 'AMENT_PREFIX_PATH': '/root/Documents/robot/miniAGV/agv_ws/install/control:/root/Documents/robot/miniAGV/agv_ws/install/car_drivers:/root/yahboomcar_ws/install/yahboomcar_visual:/root/yahboomcar_ws/install/yahboomcar_nav:/root/yahboomcar_ws/install/yahboomcar_multi:/root/yahboomcar_ws/install/yahboomcar_msgs:/root/yahboomcar_ws/install/yahboomcar_linefollower:/root/yahboomcar_ws/install/yahboomcar_laser:/root/yahboomcar_ws/install/yahboomcar_kcftracker:/root/yahboomcar_ws/install/yahboomcar_imshow:/root/yahboomcar_ws/install/yahboomcar_description:/root/yahboomcar_ws/install/yahboomcar_ctrl:/root/yahboomcar_ws/install/yahboomcar_csi_cam_py:/root/yahboomcar_ws/install/yahboomcar_colortrack:/root/yahboomcar_ws/install/yahboomcar_bringup:/root/yahboomcar_ws/install/yahboomcar_base_node:/root/yahboomcar_ws/install/yahboomcar_autonomous:/root/yahboomcar_ws/install/yahboom_web_savmap_interfaces:/root/yahboomcar_ws/install/yahboom_app_save_map:/root/yahboomcar_ws/install/robot_pose_publisher_ros2:/root/yahboomcar_ws/install/robot_localization:/root/yahboomcar_ws/install/object_detection:/root/yahboomcar_ws/install/line_follower_perception:/root/yahboomcar_ws/install/laserscan_to_point_publisher:/root/yahboomcar_ws/install/gesture_control:/root/yahboomcar_ws/install/body_tracking:/root/software/nav2_ws/install/nav2_system_tests:/root/software/nav2_ws/install/nav2_bringup:/root/software/nav2_ws/install/navigation2:/root/software/nav2_ws/install/smac_planner:/root/software/nav2_ws/install/nav2_dwb_controller:/root/software/nav2_ws/install/nav2_controller:/root/software/nav2_ws/install/dwb_plugins:/root/software/nav2_ws/install/dwb_critics:/root/software/nav2_ws/install/dwb_core:/root/software/nav2_ws/install/nav_2d_utils:/root/software/nav2_ws/install/dwb_msgs:/root/software/nav2_ws/install/nav_2d_msgs:/root/software/nav2_ws/install/nav2_waypoint_follower:/root/software/nav2_ws/install/nav2_regulated_pure_pursuit_controller:/root/software/nav2_ws/install/nav2_recoveries:/root/software/nav2_ws/install/nav2_planner:/root/software/nav2_ws/install/nav2_navfn_planner:/root/software/nav2_ws/install/nav2_core:/root/software/nav2_ws/install/costmap_queue:/root/software/nav2_ws/install/nav2_costmap_2d:/root/software/nav2_ws/install/nav2_voxel_grid:/root/software/nav2_ws/install/nav2_map_server:/root/software/nav2_ws/install/nav2_lifecycle_manager:/root/software/nav2_ws/install/nav2_bt_navigator:/root/software/nav2_ws/install/nav2_behavior_tree:/root/software/nav2_ws/install/nav2_amcl:/root/software/nav2_ws/install/nav2_util:/root/software/nav2_ws/install/nav2_msgs:/root/software/nav2_ws/install/nav2_gazebo_spawner:/root/software/nav2_ws/install/nav2_common:/root/software/library_ws/install/slam_gmapping:/root/software/library_ws/install/rosbridge_test_msgs:/root/software/library_ws/install/rosbridge_suite:/root/software/library_ws/install/rosbridge_server:/root/software/library_ws/install/rosbridge_msgs:/root/software/library_ws/install/rosapi:/root/software/library_ws/install/rosboard:/root/software/library_ws/install/rosapi_msgs:/root/software/library_ws/install/oradar_lidar:/root/software/library_ws/install/openslam_gmapping:/root/software/library_ws/install/nav2_recoveries:/root/software/library_ws/install/nav2_planner:/root/software/library_ws/install/nav2_controller:/root/software/library_ws/install/imu_filter_madgwick:/root/software/library_ws/install/costmap_converter:/root/software/library_ws/install/costmap_converter_msgs:/root/software/library_ws/install/cartographer_ros:/root/software/library_ws/install/cartographer_ros_msgs:/root/software/library_ws/install/astra_camera:/root/software/library_ws/install/astra_camera_msgs:/opt/tros:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/root/Documents/robot/miniAGV/agv_ws/build/car_drivers', 'SSH_CONNECTION': '192.168.0.9 36632 192.168.0.7 22', 'PYTHONPATH': '/root/Documents/robot/miniAGV/agv_ws/build/car_drivers/prefix_override:/root/Documents/robot/miniAGV/agv_ws/install/car_drivers/lib/python3.8/site-packages:/root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages:/root/Documents/robot/miniAGV/agv_ws/install/car_drivers/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboomcar_visual/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboomcar_nav/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboomcar_multi/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboomcar_msgs/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboomcar_linefollower/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboomcar_laser/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboomcar_imshow/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboomcar_description/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboomcar_ctrl/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboomcar_csi_cam_py/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboomcar_colortrack/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboomcar_bringup/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboom_web_savmap_interfaces/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboom_app_save_map/lib/python3.8/site-packages:/root/yahboomcar_ws/install/robot_localization/lib/python3.8/site-packages:/root/yahboomcar_ws/install/object_detection/lib/python3.8/site-packages:/root/yahboomcar_ws/install/laserscan_to_point_publisher/lib/python3.8/site-packages:/root/software/nav2_ws/install/dwb_msgs/lib/python3.8/site-packages:/root/software/nav2_ws/install/nav_2d_msgs/lib/python3.8/site-packages:/root/software/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/root/software/nav2_ws/install/nav2_gazebo_spawner/lib/python3.8/site-packages:/root/software/nav2_ws/install/nav2_common/lib/python3.8/site-packages:/root/software/library_ws/install/rosbridge_test_msgs/lib/python3.8/site-packages:/root/software/library_ws/install/rosbridge_server/lib/python3.8/site-packages:/root/software/library_ws/install/rosbridge_msgs/lib/python3.8/site-packages:/root/software/library_ws/install/rosapi/lib/python3.8/site-packages:/root/software/library_ws/install/rosboard/lib/python3.8/site-packages:/root/software/library_ws/install/rosapi_msgs/lib/python3.8/site-packages:/root/software/library_ws/install/costmap_converter_msgs/lib/python3.8/site-packages:/root/software/library_ws/install/cartographer_ros_msgs/lib/python3.8/site-packages:/root/software/library_ws/install/astra_camera_msgs/lib/python3.8/site-packages:/opt/tros/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/root/yahboomcar_ws/install/yahboomcar_msgs:/root/yahboomcar_ws/install/yahboomcar_kcftracker:/root/yahboomcar_ws/install/yahboomcar_base_node:/root/yahboomcar_ws/install/yahboomcar_autonomous:/root/yahboomcar_ws/install/yahboom_web_savmap_interfaces:/root/yahboomcar_ws/install/robot_pose_publisher_ros2:/root/yahboomcar_ws/install/robot_localization:/root/yahboomcar_ws/install/line_follower_perception:/root/yahboomcar_ws/install/gesture_control:/root/yahboomcar_ws/install/body_tracking:/root/software/nav2_ws/install/nav2_system_tests:/root/software/nav2_ws/install/nav2_bringup:/root/software/nav2_ws/install/navigation2:/root/software/nav2_ws/install/smac_planner:/root/software/nav2_ws/install/nav2_dwb_controller:/root/software/nav2_ws/install/nav2_controller:/root/software/nav2_ws/install/dwb_plugins:/root/software/nav2_ws/install/dwb_critics:/root/software/nav2_ws/install/dwb_core:/root/software/nav2_ws/install/nav_2d_utils:/root/software/nav2_ws/install/dwb_msgs:/root/software/nav2_ws/install/nav_2d_msgs:/root/software/nav2_ws/install/nav2_waypoint_follower:/root/software/nav2_ws/install/nav2_regulated_pure_pursuit_controller:/root/software/nav2_ws/install/nav2_recoveries:/root/software/nav2_ws/install/nav2_planner:/root/software/nav2_ws/install/nav2_navfn_planner:/root/software/nav2_ws/install/nav2_core:/root/software/nav2_ws/install/costmap_queue:/root/software/nav2_ws/install/nav2_costmap_2d:/root/software/nav2_ws/install/nav2_voxel_grid:/root/software/nav2_ws/install/nav2_map_server:/root/software/nav2_ws/install/nav2_lifecycle_manager:/root/software/nav2_ws/install/nav2_bt_navigator:/root/software/nav2_ws/install/nav2_behavior_tree:/root/software/nav2_ws/install/nav2_amcl:/root/software/nav2_ws/install/nav2_util:/root/software/nav2_ws/install/nav2_msgs:/root/software/nav2_ws/install/nav2_common:/root/software/library_ws/install/slam_gmapping:/root/software/library_ws/install/rosbridge_test_msgs:/root/software/library_ws/install/rosbridge_suite:/root/software/library_ws/install/rosbridge_server:/root/software/library_ws/install/rosbridge_msgs:/root/software/library_ws/install/rosapi:/root/software/library_ws/install/rosapi_msgs:/root/software/library_ws/install/oradar_lidar:/root/software/library_ws/install/openslam_gmapping:/root/software/library_ws/install/nav2_recoveries:/root/software/library_ws/install/nav2_planner:/root/software/library_ws/install/nav2_controller:/root/software/library_ws/install/imu_filter_madgwick:/root/software/library_ws/install/costmap_converter:/root/software/library_ws/install/costmap_converter_msgs:/root/software/library_ws/install/cartographer_ros:/root/software/library_ws/install/cartographer_ros_msgs:/root/software/library_ws/install/cartographer:/root/software/library_ws/install/astra_camera:/root/software/library_ws/install/astra_camera_msgs:/opt/tros'}, 'shell': False}
+[12.494349] (-) TimerEvent: {}
+[12.522204] (control) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/control', 'build', '--build-base', '/root/Documents/robot/miniAGV/agv_ws/build/control/build', 'install', '--record', '/root/Documents/robot/miniAGV/agv_ws/build/control/install.log', '--install-scripts', '$base/lib/control', '--single-version-externally-managed'], 'cwd': '/root/Documents/robot/miniAGV/agv_ws/src/control', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_US.UTF-8', 'USER': 'root', 'SSH_CLIENT': '192.168.0.9 36632 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/root/yahboomcar_ws/install/yahboomcar_msgs/lib:/root/yahboomcar_ws/install/yahboom_web_savmap_interfaces/lib:/root/yahboomcar_ws/install/robot_localization/lib:/root/software/nav2_ws/install/smac_planner/lib:/root/software/nav2_ws/install/nav2_controller/lib:/root/software/nav2_ws/install/dwb_plugins/lib:/root/software/nav2_ws/install/dwb_critics/lib:/root/software/nav2_ws/install/dwb_core/lib:/root/software/nav2_ws/install/nav_2d_utils/lib:/root/software/nav2_ws/install/dwb_msgs/lib:/root/software/nav2_ws/install/nav_2d_msgs/lib:/root/software/nav2_ws/install/nav2_waypoint_follower/lib:/root/software/nav2_ws/install/nav2_regulated_pure_pursuit_controller/lib:/root/software/nav2_ws/install/nav2_recoveries/lib:/root/software/nav2_ws/install/nav2_planner/lib:/root/software/nav2_ws/install/nav2_navfn_planner/lib:/root/software/nav2_ws/install/costmap_queue/lib:/root/software/nav2_ws/install/nav2_costmap_2d/lib:/root/software/nav2_ws/install/nav2_voxel_grid/lib:/root/software/nav2_ws/install/nav2_map_server/lib:/root/software/nav2_ws/install/nav2_lifecycle_manager/lib:/root/software/nav2_ws/install/nav2_bt_navigator/lib:/root/software/nav2_ws/install/nav2_behavior_tree/lib:/root/software/nav2_ws/install/nav2_amcl/lib:/root/software/nav2_ws/install/nav2_util/lib:/root/software/nav2_ws/install/nav2_msgs/lib:/root/software/library_ws/install/rosbridge_test_msgs/lib:/root/software/library_ws/install/rosbridge_msgs/lib:/root/software/library_ws/install/rosapi_msgs/lib:/root/software/library_ws/install/openslam_gmapping/lib:/root/software/library_ws/install/nav2_recoveries/lib:/root/software/library_ws/install/nav2_planner/lib:/root/software/library_ws/install/nav2_controller/lib:/root/software/library_ws/install/imu_filter_madgwick/lib:/root/software/library_ws/install/costmap_converter/lib:/root/software/library_ws/install/costmap_converter_msgs/lib:/root/software/library_ws/install/cartographer_ros_msgs/lib:/root/software/library_ws/install/astra_camera/lib:/root/software/library_ws/install/astra_camera_msgs/lib:/opt/tros/opt/yaml_cpp_vendor/lib:/opt/tros/lib:/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/root', 'OLDPWD': '/root/Documents/robot/miniAGV/agv_ws/src', 'SSH_TTY': '/dev/pts/1', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/0/bus', 'COLCON_PREFIX_PATH': '/root/Documents/robot/miniAGV/agv_ws/install:/root/software/nav2_ws/install:/root/software/library_ws/install:/root/yahboomcar_ws/install:/opt/tros', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'root', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/root/software/library_ws/install/cartographer/lib/aarch64-linux-gnu/pkgconfig:/root/software/library_ws/install/cartographer/lib/pkgconfig:/opt/tros/lib/x86_64-linux-gnu/pkgconfig:/opt/tros/lib/pkgconfig', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '2', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/root/software/library_ws/install/oradar_lidar/bin:/root/software/library_ws/install/costmap_converter/bin:/root/software/library_ws/install/cartographer/bin:/opt/tros/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_DOMAIN_ID': '32', 'AMENT_PREFIX_PATH': '/root/Documents/robot/miniAGV/agv_ws/install/control:/root/Documents/robot/miniAGV/agv_ws/install/car_drivers:/root/yahboomcar_ws/install/yahboomcar_visual:/root/yahboomcar_ws/install/yahboomcar_nav:/root/yahboomcar_ws/install/yahboomcar_multi:/root/yahboomcar_ws/install/yahboomcar_msgs:/root/yahboomcar_ws/install/yahboomcar_linefollower:/root/yahboomcar_ws/install/yahboomcar_laser:/root/yahboomcar_ws/install/yahboomcar_kcftracker:/root/yahboomcar_ws/install/yahboomcar_imshow:/root/yahboomcar_ws/install/yahboomcar_description:/root/yahboomcar_ws/install/yahboomcar_ctrl:/root/yahboomcar_ws/install/yahboomcar_csi_cam_py:/root/yahboomcar_ws/install/yahboomcar_colortrack:/root/yahboomcar_ws/install/yahboomcar_bringup:/root/yahboomcar_ws/install/yahboomcar_base_node:/root/yahboomcar_ws/install/yahboomcar_autonomous:/root/yahboomcar_ws/install/yahboom_web_savmap_interfaces:/root/yahboomcar_ws/install/yahboom_app_save_map:/root/yahboomcar_ws/install/robot_pose_publisher_ros2:/root/yahboomcar_ws/install/robot_localization:/root/yahboomcar_ws/install/object_detection:/root/yahboomcar_ws/install/line_follower_perception:/root/yahboomcar_ws/install/laserscan_to_point_publisher:/root/yahboomcar_ws/install/gesture_control:/root/yahboomcar_ws/install/body_tracking:/root/software/nav2_ws/install/nav2_system_tests:/root/software/nav2_ws/install/nav2_bringup:/root/software/nav2_ws/install/navigation2:/root/software/nav2_ws/install/smac_planner:/root/software/nav2_ws/install/nav2_dwb_controller:/root/software/nav2_ws/install/nav2_controller:/root/software/nav2_ws/install/dwb_plugins:/root/software/nav2_ws/install/dwb_critics:/root/software/nav2_ws/install/dwb_core:/root/software/nav2_ws/install/nav_2d_utils:/root/software/nav2_ws/install/dwb_msgs:/root/software/nav2_ws/install/nav_2d_msgs:/root/software/nav2_ws/install/nav2_waypoint_follower:/root/software/nav2_ws/install/nav2_regulated_pure_pursuit_controller:/root/software/nav2_ws/install/nav2_recoveries:/root/software/nav2_ws/install/nav2_planner:/root/software/nav2_ws/install/nav2_navfn_planner:/root/software/nav2_ws/install/nav2_core:/root/software/nav2_ws/install/costmap_queue:/root/software/nav2_ws/install/nav2_costmap_2d:/root/software/nav2_ws/install/nav2_voxel_grid:/root/software/nav2_ws/install/nav2_map_server:/root/software/nav2_ws/install/nav2_lifecycle_manager:/root/software/nav2_ws/install/nav2_bt_navigator:/root/software/nav2_ws/install/nav2_behavior_tree:/root/software/nav2_ws/install/nav2_amcl:/root/software/nav2_ws/install/nav2_util:/root/software/nav2_ws/install/nav2_msgs:/root/software/nav2_ws/install/nav2_gazebo_spawner:/root/software/nav2_ws/install/nav2_common:/root/software/library_ws/install/slam_gmapping:/root/software/library_ws/install/rosbridge_test_msgs:/root/software/library_ws/install/rosbridge_suite:/root/software/library_ws/install/rosbridge_server:/root/software/library_ws/install/rosbridge_msgs:/root/software/library_ws/install/rosapi:/root/software/library_ws/install/rosboard:/root/software/library_ws/install/rosapi_msgs:/root/software/library_ws/install/oradar_lidar:/root/software/library_ws/install/openslam_gmapping:/root/software/library_ws/install/nav2_recoveries:/root/software/library_ws/install/nav2_planner:/root/software/library_ws/install/nav2_controller:/root/software/library_ws/install/imu_filter_madgwick:/root/software/library_ws/install/costmap_converter:/root/software/library_ws/install/costmap_converter_msgs:/root/software/library_ws/install/cartographer_ros:/root/software/library_ws/install/cartographer_ros_msgs:/root/software/library_ws/install/astra_camera:/root/software/library_ws/install/astra_camera_msgs:/opt/tros:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/root/Documents/robot/miniAGV/agv_ws/build/control', 'SSH_CONNECTION': '192.168.0.9 36632 192.168.0.7 22', 'PYTHONPATH': '/root/Documents/robot/miniAGV/agv_ws/build/control/prefix_override:/root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages:/root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages:/root/Documents/robot/miniAGV/agv_ws/install/car_drivers/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboomcar_visual/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboomcar_nav/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboomcar_multi/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboomcar_msgs/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboomcar_linefollower/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboomcar_laser/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboomcar_imshow/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboomcar_description/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboomcar_ctrl/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboomcar_csi_cam_py/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboomcar_colortrack/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboomcar_bringup/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboom_web_savmap_interfaces/lib/python3.8/site-packages:/root/yahboomcar_ws/install/yahboom_app_save_map/lib/python3.8/site-packages:/root/yahboomcar_ws/install/robot_localization/lib/python3.8/site-packages:/root/yahboomcar_ws/install/object_detection/lib/python3.8/site-packages:/root/yahboomcar_ws/install/laserscan_to_point_publisher/lib/python3.8/site-packages:/root/software/nav2_ws/install/dwb_msgs/lib/python3.8/site-packages:/root/software/nav2_ws/install/nav_2d_msgs/lib/python3.8/site-packages:/root/software/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/root/software/nav2_ws/install/nav2_gazebo_spawner/lib/python3.8/site-packages:/root/software/nav2_ws/install/nav2_common/lib/python3.8/site-packages:/root/software/library_ws/install/rosbridge_test_msgs/lib/python3.8/site-packages:/root/software/library_ws/install/rosbridge_server/lib/python3.8/site-packages:/root/software/library_ws/install/rosbridge_msgs/lib/python3.8/site-packages:/root/software/library_ws/install/rosapi/lib/python3.8/site-packages:/root/software/library_ws/install/rosboard/lib/python3.8/site-packages:/root/software/library_ws/install/rosapi_msgs/lib/python3.8/site-packages:/root/software/library_ws/install/costmap_converter_msgs/lib/python3.8/site-packages:/root/software/library_ws/install/cartographer_ros_msgs/lib/python3.8/site-packages:/root/software/library_ws/install/astra_camera_msgs/lib/python3.8/site-packages:/opt/tros/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/root/yahboomcar_ws/install/yahboomcar_msgs:/root/yahboomcar_ws/install/yahboomcar_kcftracker:/root/yahboomcar_ws/install/yahboomcar_base_node:/root/yahboomcar_ws/install/yahboomcar_autonomous:/root/yahboomcar_ws/install/yahboom_web_savmap_interfaces:/root/yahboomcar_ws/install/robot_pose_publisher_ros2:/root/yahboomcar_ws/install/robot_localization:/root/yahboomcar_ws/install/line_follower_perception:/root/yahboomcar_ws/install/gesture_control:/root/yahboomcar_ws/install/body_tracking:/root/software/nav2_ws/install/nav2_system_tests:/root/software/nav2_ws/install/nav2_bringup:/root/software/nav2_ws/install/navigation2:/root/software/nav2_ws/install/smac_planner:/root/software/nav2_ws/install/nav2_dwb_controller:/root/software/nav2_ws/install/nav2_controller:/root/software/nav2_ws/install/dwb_plugins:/root/software/nav2_ws/install/dwb_critics:/root/software/nav2_ws/install/dwb_core:/root/software/nav2_ws/install/nav_2d_utils:/root/software/nav2_ws/install/dwb_msgs:/root/software/nav2_ws/install/nav_2d_msgs:/root/software/nav2_ws/install/nav2_waypoint_follower:/root/software/nav2_ws/install/nav2_regulated_pure_pursuit_controller:/root/software/nav2_ws/install/nav2_recoveries:/root/software/nav2_ws/install/nav2_planner:/root/software/nav2_ws/install/nav2_navfn_planner:/root/software/nav2_ws/install/nav2_core:/root/software/nav2_ws/install/costmap_queue:/root/software/nav2_ws/install/nav2_costmap_2d:/root/software/nav2_ws/install/nav2_voxel_grid:/root/software/nav2_ws/install/nav2_map_server:/root/software/nav2_ws/install/nav2_lifecycle_manager:/root/software/nav2_ws/install/nav2_bt_navigator:/root/software/nav2_ws/install/nav2_behavior_tree:/root/software/nav2_ws/install/nav2_amcl:/root/software/nav2_ws/install/nav2_util:/root/software/nav2_ws/install/nav2_msgs:/root/software/nav2_ws/install/nav2_common:/root/software/library_ws/install/slam_gmapping:/root/software/library_ws/install/rosbridge_test_msgs:/root/software/library_ws/install/rosbridge_suite:/root/software/library_ws/install/rosbridge_server:/root/software/library_ws/install/rosbridge_msgs:/root/software/library_ws/install/rosapi:/root/software/library_ws/install/rosapi_msgs:/root/software/library_ws/install/oradar_lidar:/root/software/library_ws/install/openslam_gmapping:/root/software/library_ws/install/nav2_recoveries:/root/software/library_ws/install/nav2_planner:/root/software/library_ws/install/nav2_controller:/root/software/library_ws/install/imu_filter_madgwick:/root/software/library_ws/install/costmap_converter:/root/software/library_ws/install/costmap_converter_msgs:/root/software/library_ws/install/cartographer_ros:/root/software/library_ws/install/cartographer_ros_msgs:/root/software/library_ws/install/cartographer:/root/software/library_ws/install/astra_camera:/root/software/library_ws/install/astra_camera_msgs:/opt/tros'}, 'shell': False}
+[12.594648] (-) TimerEvent: {}
+[12.695896] (-) TimerEvent: {}
+[12.797857] (-) TimerEvent: {}
+[12.898936] (-) TimerEvent: {}
+[13.000172] (-) TimerEvent: {}
+[13.101704] (-) TimerEvent: {}
+[13.202908] (-) TimerEvent: {}
+[13.305887] (-) TimerEvent: {}
+[13.407916] (-) TimerEvent: {}
+[13.509081] (-) TimerEvent: {}
+[13.610745] (-) TimerEvent: {}
+[13.711908] (-) TimerEvent: {}
+[13.813002] (-) TimerEvent: {}
+[13.914206] (-) TimerEvent: {}
+[14.016206] (-) TimerEvent: {}
+[14.117322] (-) TimerEvent: {}
+[14.218422] (-) TimerEvent: {}
+[14.319628] (-) TimerEvent: {}
+[14.420930] (-) TimerEvent: {}
+[14.522124] (-) TimerEvent: {}
+[14.623598] (-) TimerEvent: {}
+[14.724820] (-) TimerEvent: {}
+[14.827706] (-) TimerEvent: {}
+[14.928904] (-) TimerEvent: {}
+[15.030086] (-) TimerEvent: {}
+[15.131780] (-) TimerEvent: {}
+[15.233413] (-) TimerEvent: {}
+[15.338926] (-) TimerEvent: {}
+[15.441503] (-) TimerEvent: {}
+[15.543364] (-) TimerEvent: {}
+[15.645328] (-) TimerEvent: {}
+[15.746588] (-) TimerEvent: {}
+[15.840678] (car_drivers) StdoutLine: {'line': b'running egg_info\n'}
+[15.846935] (-) TimerEvent: {}
+[15.857596] (car_drivers) StdoutLine: {'line': b'writing ../../build/car_drivers/car_drivers.egg-info/PKG-INFO\n'}
+[15.861799] (car_drivers) StdoutLine: {'line': b'writing dependency_links to ../../build/car_drivers/car_drivers.egg-info/dependency_links.txt\n'}
+[15.865760] (car_drivers) StdoutLine: {'line': b'writing entry points to ../../build/car_drivers/car_drivers.egg-info/entry_points.txt\n'}
+[15.871709] (car_drivers) StdoutLine: {'line': b'writing requirements to ../../build/car_drivers/car_drivers.egg-info/requires.txt\n'}
+[15.877985] (car_drivers) StdoutLine: {'line': b'writing top-level names to ../../build/car_drivers/car_drivers.egg-info/top_level.txt\n'}
+[15.885719] (control) StdoutLine: {'line': b'running egg_info\n'}
+[15.895293] (control) StdoutLine: {'line': b'writing ../../build/control/control.egg-info/PKG-INFO\n'}
+[15.906599] (control) StdoutLine: {'line': b'writing dependency_links to ../../build/control/control.egg-info/dependency_links.txt\n'}
+[15.907784] (control) StdoutLine: {'line': b'writing entry points to ../../build/control/control.egg-info/entry_points.txt\n'}
+[15.908907] (control) StdoutLine: {'line': b'writing requirements to ../../build/control/control.egg-info/requires.txt\n'}
+[15.909962] (control) StdoutLine: {'line': b'writing top-level names to ../../build/control/control.egg-info/top_level.txt\n'}
+[15.947133] (-) TimerEvent: {}
+[16.048194] (-) TimerEvent: {}
+[16.149257] (-) TimerEvent: {}
+[16.205344] (car_drivers) StdoutLine: {'line': b"reading manifest file '../../build/car_drivers/car_drivers.egg-info/SOURCES.txt'\n"}
+[16.212517] (car_drivers) StdoutLine: {'line': b"writing manifest file '../../build/car_drivers/car_drivers.egg-info/SOURCES.txt'\n"}
+[16.215311] (car_drivers) StdoutLine: {'line': b'running build\n'}
+[16.216386] (car_drivers) StdoutLine: {'line': b'running build_py\n'}
+[16.217621] (car_drivers) StdoutLine: {'line': b'copying car_drivers/move_drivers.py -> /root/Documents/robot/miniAGV/agv_ws/build/car_drivers/build/lib/car_drivers\n'}
+[16.218552] (car_drivers) StdoutLine: {'line': b'running install\n'}
+[16.224544] (car_drivers) StdoutLine: {'line': b'running install_lib\n'}
+[16.233334] (car_drivers) StdoutLine: {'line': b'copying /root/Documents/robot/miniAGV/agv_ws/build/car_drivers/build/lib/car_drivers/move_drivers.py -> /root/Documents/robot/miniAGV/agv_ws/install/car_drivers/lib/python3.8/site-packages/car_drivers\n'}
+[16.240234] (car_drivers) StdoutLine: {'line': b'byte-compiling /root/Documents/robot/miniAGV/agv_ws/install/car_drivers/lib/python3.8/site-packages/car_drivers/move_drivers.py to move_drivers.cpython-38.pyc\n'}
+[16.243722] (control) StdoutLine: {'line': b"reading manifest file '../../build/control/control.egg-info/SOURCES.txt'\n"}
+[16.249494] (-) TimerEvent: {}
+[16.252883] (control) StdoutLine: {'line': b"writing manifest file '../../build/control/control.egg-info/SOURCES.txt'\n"}
+[16.255123] (control) StdoutLine: {'line': b'running build\n'}
+[16.256396] (control) StdoutLine: {'line': b'running build_py\n'}
+[16.258594] (control) StdoutLine: {'line': b'copying control/controller.py -> /root/Documents/robot/miniAGV/agv_ws/build/control/build/lib/control\n'}
+[16.259719] (control) StdoutLine: {'line': b'copying control/odometry.py -> /root/Documents/robot/miniAGV/agv_ws/build/control/build/lib/control\n'}
+[16.260553] (car_drivers) StdoutLine: {'line': b'running install_data\n'}
+[16.261464] (control) StdoutLine: {'line': b'running install\n'}
+[16.267414] (car_drivers) StdoutLine: {'line': b'running install_egg_info\n'}
+[16.269196] (control) StdoutLine: {'line': b'running install_lib\n'}
+[16.278066] (control) StdoutLine: {'line': b'copying /root/Documents/robot/miniAGV/agv_ws/build/control/build/lib/control/controller.py -> /root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages/control\n'}
+[16.281057] (control) StdoutLine: {'line': b'copying /root/Documents/robot/miniAGV/agv_ws/build/control/build/lib/control/odometry.py -> /root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages/control\n'}
+[16.282027] (car_drivers) StdoutLine: {'line': b"removing '/root/Documents/robot/miniAGV/agv_ws/install/car_drivers/lib/python3.8/site-packages/car_drivers-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[16.283653] (car_drivers) StdoutLine: {'line': b'Copying ../../build/car_drivers/car_drivers.egg-info to /root/Documents/robot/miniAGV/agv_ws/install/car_drivers/lib/python3.8/site-packages/car_drivers-0.0.0-py3.8.egg-info\n'}
+[16.290730] (control) StdoutLine: {'line': b'byte-compiling /root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages/control/controller.py to controller.cpython-38.pyc\n'}
+[16.291827] (car_drivers) StdoutLine: {'line': b'running install_scripts\n'}
+[16.309129] (control) StdoutLine: {'line': b'byte-compiling /root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages/control/odometry.py to odometry.cpython-38.pyc\n'}
+[16.316488] (control) StdoutLine: {'line': b'running install_data\n'}
+[16.320356] (control) StdoutLine: {'line': b'running install_egg_info\n'}
+[16.336937] (control) StdoutLine: {'line': b"removing '/root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages/control-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[16.339207] (control) StdoutLine: {'line': b'Copying ../../build/control/control.egg-info to /root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages/control-0.0.0-py3.8.egg-info\n'}
+[16.346331] (control) StdoutLine: {'line': b'running install_scripts\n'}
+[16.349694] (-) TimerEvent: {}
+[16.451635] (-) TimerEvent: {}
+[16.456000] (car_drivers) StdoutLine: {'line': b'Installing move_drivers script to /root/Documents/robot/miniAGV/agv_ws/install/car_drivers/lib/car_drivers\n'}
+[16.458437] (car_drivers) StdoutLine: {'line': b"writing list of installed files to '/root/Documents/robot/miniAGV/agv_ws/build/car_drivers/install.log'\n"}
+[16.514164] (control) StdoutLine: {'line': b'Installing controller script to /root/Documents/robot/miniAGV/agv_ws/install/control/lib/control\n'}
+[16.516021] (control) StdoutLine: {'line': b'Installing odometry script to /root/Documents/robot/miniAGV/agv_ws/install/control/lib/control\n'}
+[16.519492] (control) StdoutLine: {'line': b'Installing trajectory script to /root/Documents/robot/miniAGV/agv_ws/install/control/lib/control\n'}
+[16.521722] (control) StdoutLine: {'line': b"writing list of installed files to '/root/Documents/robot/miniAGV/agv_ws/build/control/install.log'\n"}
+[16.551953] (-) TimerEvent: {}
+[16.653357] (-) TimerEvent: {}
+[16.688304] (car_drivers) CommandEnded: {'returncode': 0}
+[16.753947] (-) TimerEvent: {}
+[16.835033] (car_drivers) JobEnded: {'identifier': 'car_drivers', 'rc': 0}
+[16.864580] (-) TimerEvent: {}
+[16.865888] (control) CommandEnded: {'returncode': 0}
+[16.939947] (control) JobEnded: {'identifier': 'control', 'rc': 0}
+[16.945252] (-) EventReactorShutdown: {}

@@ -1,28 +1,40 @@
+#!/usr/bin/env python3
+
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import String
+from geometry_msgs.msg import Pose2D
+
 
 class TrajectoryNode(Node):
     def __init__(self):
         super().__init__('trajectory_node')
-        timer_period = 0.5  # seconds
-        self.publisher_ = self.create_publisher(String, 'topic', 10)
-        self.timer = self.create_timer(timer_period, self.new_position_callback)
-        self.i = 0
 
-    def new_position_callback(self):
-        msg = String()
-        msg.data = 'Hello World: %d' % self.i
-        self.publisher_.publish(msg)
-        # self.get_logger().info('Publishing: "%s"' % msg.data)
-        self.i += 1
+        self.pose_pub = self.create_publisher(Pose2D, 'desired_pose', 10)
+        self.timer = self.create_timer(0.5, self.publish_desired_pose)
 
-def main():
-    print('Standing trajectory node')
-    rclpy.init()
-    trajectory_node = TrajectoryNode()
-    rclpy.spin(trajectory_node)
-    print('fuera')
+        # Define your desired point and angle
+        self.x = 0.0   # Desired X position
+        self.y = 0.0   # Desired Y position
+        self.theta = 0.0  # Desired orientation (yaw) in radians (about 90 degrees)
+
+    def publish_desired_pose(self):
+        pose_msg = Pose2D()
+        pose_msg.x = self.x
+        pose_msg.y = self.y
+        pose_msg.theta = self.theta
+
+        self.pose_pub.publish(pose_msg)
+        # self.get_logger().info(f"Publishing desired_pose: x={self.x}, y={self.y}, theta={self.theta}")
+
+
+def main(args=None):
+    print('Starting trajectory node...')
+    rclpy.init(args=args)
+    node = TrajectoryNode()
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()
+    print('Shutting down trajectory node.')
 
 
 if __name__ == '__main__':

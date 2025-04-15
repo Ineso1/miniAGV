@@ -18,6 +18,12 @@ def generate_launch_description():
 
     return LaunchDescription([
         Node(
+            package='car_drivers',
+            executable='move_drivers',
+            name='move_drivers',
+            output='screen'
+        ),
+        Node(
             package='control',
             executable='controller',
             name='controller',

@@ -1,0 +1,182 @@
+[3.757s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[3.758s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f9551e310>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=4, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f9551e310>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f9551e850>)
+[4.086s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[4.087s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[4.088s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[4.088s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[4.088s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[4.089s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[4.089s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/root/Documents/robot/miniAGV/agv_ws'
+[4.090s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[4.091s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[4.091s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[4.092s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[4.092s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[4.093s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[4.093s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[4.093s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[4.094s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[4.264s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[4.264s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[4.264s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[4.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[4.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[4.266s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[4.267s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[4.267s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[4.268s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[4.269s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[4.270s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[4.271s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[4.271s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[4.272s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[4.272s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[4.273s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[4.274s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[4.274s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[4.275s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[4.275s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[4.275s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[4.276s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[4.276s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[4.277s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[4.277s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[4.277s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[4.278s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[4.278s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[4.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_drivers) by extensions ['ignore', 'ignore_ament_install']
+[4.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_drivers) by extension 'ignore'
+[4.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_drivers) by extension 'ignore_ament_install'
+[4.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_drivers) by extensions ['colcon_pkg']
+[4.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_drivers) by extension 'colcon_pkg'
+[4.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_drivers) by extensions ['colcon_meta']
+[4.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_drivers) by extension 'colcon_meta'
+[4.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_drivers) by extensions ['ros']
+[4.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_drivers) by extension 'ros'
+[4.306s] DEBUG:colcon.colcon_core.package_identification:Package 'src/car_drivers' with type 'ros.ament_python' and name 'car_drivers'
+[4.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extensions ['ignore', 'ignore_ament_install']
+[4.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extension 'ignore'
+[4.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extension 'ignore_ament_install'
+[4.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extensions ['colcon_pkg']
+[4.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extension 'colcon_pkg'
+[4.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extensions ['colcon_meta']
+[4.310s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extension 'colcon_meta'
+[4.310s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extensions ['ros']
+[4.311s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extension 'ros'
+[4.316s] DEBUG:colcon.colcon_core.package_identification:Package 'src/control' with type 'ros.ament_python' and name 'control'
+[4.316s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[4.317s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[4.317s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[4.318s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[4.318s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[4.529s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[4.529s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[4.571s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /root/Documents/robot/miniAGV/agv_ws/install
+[4.592s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 31 installed packages in /root/software/nav2_ws/install
+[4.612s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 22 installed packages in /root/software/library_ws/install
+[4.631s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 24 installed packages in /root/yahboomcar_ws/install
+[4.686s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 424 installed packages in /opt/tros
+[4.740s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 361 installed packages in /opt/ros/foxy
+[4.852s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[6.288s] Level 5:colcon.colcon_core.verb:set package 'car_drivers' build argument 'cmake_args' from command line to 'None'
+[6.288s] Level 5:colcon.colcon_core.verb:set package 'car_drivers' build argument 'cmake_target' from command line to 'None'
+[6.289s] Level 5:colcon.colcon_core.verb:set package 'car_drivers' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[6.289s] Level 5:colcon.colcon_core.verb:set package 'car_drivers' build argument 'cmake_clean_cache' from command line to 'False'
+[6.289s] Level 5:colcon.colcon_core.verb:set package 'car_drivers' build argument 'cmake_clean_first' from command line to 'False'
+[6.290s] Level 5:colcon.colcon_core.verb:set package 'car_drivers' build argument 'cmake_force_configure' from command line to 'False'
+[6.290s] Level 5:colcon.colcon_core.verb:set package 'car_drivers' build argument 'ament_cmake_args' from command line to 'None'
+[6.290s] Level 5:colcon.colcon_core.verb:set package 'car_drivers' build argument 'catkin_cmake_args' from command line to 'None'
+[6.290s] Level 5:colcon.colcon_core.verb:set package 'car_drivers' build argument 'catkin_skip_building_tests' from command line to 'False'
+[6.291s] DEBUG:colcon.colcon_core.verb:Building package 'car_drivers' with the following arguments: {'ament_cmake_args': None, 'build_base': '/root/Documents/robot/miniAGV/agv_ws/build/car_drivers', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/root/Documents/robot/miniAGV/agv_ws/install/car_drivers', 'merge_install': False, 'path': '/root/Documents/robot/miniAGV/agv_ws/src/car_drivers', 'symlink_install': False, 'test_result_base': None}
+[6.302s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'cmake_args' from command line to 'None'
+[6.302s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'cmake_target' from command line to 'None'
+[6.303s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[6.303s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'cmake_clean_cache' from command line to 'False'
+[6.303s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'cmake_clean_first' from command line to 'False'
+[6.303s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'cmake_force_configure' from command line to 'False'
+[6.303s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'ament_cmake_args' from command line to 'None'
+[6.304s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'catkin_cmake_args' from command line to 'None'
+[6.304s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[6.304s] DEBUG:colcon.colcon_core.verb:Building package 'control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/root/Documents/robot/miniAGV/agv_ws/build/control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/root/Documents/robot/miniAGV/agv_ws/install/control', 'merge_install': False, 'path': '/root/Documents/robot/miniAGV/agv_ws/src/control', 'symlink_install': False, 'test_result_base': None}
+[6.311s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[6.347s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[6.348s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/root/Documents/robot/miniAGV/agv_ws/src/car_drivers' with build type 'ament_python'
+[6.350s] Level 1:colcon.colcon_core.shell:create_environment_hook('car_drivers', 'ament_prefix_path')
+[6.396s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[6.398s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/Documents/robot/miniAGV/agv_ws/install/car_drivers/share/car_drivers/hook/ament_prefix_path.ps1'
+[6.402s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/Documents/robot/miniAGV/agv_ws/install/car_drivers/share/car_drivers/hook/ament_prefix_path.dsv'
+[6.405s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/Documents/robot/miniAGV/agv_ws/install/car_drivers/share/car_drivers/hook/ament_prefix_path.sh'
+[6.425s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.425s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.597s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/root/Documents/robot/miniAGV/agv_ws/src/control' with build type 'ament_python'
+[6.598s] Level 1:colcon.colcon_core.shell:create_environment_hook('control', 'ament_prefix_path')
+[6.616s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/Documents/robot/miniAGV/agv_ws/install/control/share/control/hook/ament_prefix_path.ps1'
+[6.620s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/Documents/robot/miniAGV/agv_ws/install/control/share/control/hook/ament_prefix_path.dsv'
+[6.623s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/Documents/robot/miniAGV/agv_ws/install/control/share/control/hook/ament_prefix_path.sh'
+[6.643s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.644s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[10.001s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/root/Documents/robot/miniAGV/agv_ws/src/car_drivers'
+[10.018s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[10.019s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[13.369s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/root/Documents/robot/miniAGV/agv_ws/src/control'
+[13.388s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[13.389s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[18.994s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/Documents/robot/miniAGV/agv_ws/src/car_drivers': PYTHONPATH=/root/Documents/robot/miniAGV/agv_ws/build/car_drivers/prefix_override:/root/Documents/robot/miniAGV/agv_ws/install/car_drivers/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/car_drivers build --build-base /root/Documents/robot/miniAGV/agv_ws/build/car_drivers/build install --record /root/Documents/robot/miniAGV/agv_ws/build/car_drivers/install.log --install-scripts $base/lib/car_drivers --single-version-externally-managed
+[19.040s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/Documents/robot/miniAGV/agv_ws/src/control': PYTHONPATH=/root/Documents/robot/miniAGV/agv_ws/build/control/prefix_override:/root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/control build --build-base /root/Documents/robot/miniAGV/agv_ws/build/control/build install --record /root/Documents/robot/miniAGV/agv_ws/build/control/install.log --install-scripts $base/lib/control --single-version-externally-managed
+[23.201s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/Documents/robot/miniAGV/agv_ws/src/car_drivers' returned '0': PYTHONPATH=/root/Documents/robot/miniAGV/agv_ws/build/car_drivers/prefix_override:/root/Documents/robot/miniAGV/agv_ws/install/car_drivers/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/car_drivers build --build-base /root/Documents/robot/miniAGV/agv_ws/build/car_drivers/build install --record /root/Documents/robot/miniAGV/agv_ws/build/car_drivers/install.log --install-scripts $base/lib/car_drivers --single-version-externally-managed
+[23.257s] Level 1:colcon.colcon_core.environment:checking '/root/Documents/robot/miniAGV/agv_ws/install/car_drivers' for CMake module files
+[23.261s] Level 1:colcon.colcon_core.environment:checking '/root/Documents/robot/miniAGV/agv_ws/install/car_drivers' for CMake config files
+[23.265s] Level 1:colcon.colcon_core.environment:checking '/root/Documents/robot/miniAGV/agv_ws/install/car_drivers/lib'
+[23.267s] Level 1:colcon.colcon_core.environment:checking '/root/Documents/robot/miniAGV/agv_ws/install/car_drivers/bin'
+[23.267s] Level 1:colcon.colcon_core.environment:checking '/root/Documents/robot/miniAGV/agv_ws/install/car_drivers/lib/pkgconfig/car_drivers.pc'
+[23.269s] Level 1:colcon.colcon_core.environment:checking '/root/Documents/robot/miniAGV/agv_ws/install/car_drivers/lib/python3.8/site-packages'
+[23.270s] Level 1:colcon.colcon_core.shell:create_environment_hook('car_drivers', 'pythonpath')
+[23.286s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/Documents/robot/miniAGV/agv_ws/install/car_drivers/share/car_drivers/hook/pythonpath.ps1'
+[23.289s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/Documents/robot/miniAGV/agv_ws/install/car_drivers/share/car_drivers/hook/pythonpath.dsv'
+[23.292s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/Documents/robot/miniAGV/agv_ws/install/car_drivers/share/car_drivers/hook/pythonpath.sh'
+[23.295s] Level 1:colcon.colcon_core.environment:checking '/root/Documents/robot/miniAGV/agv_ws/install/car_drivers/bin'
+[23.296s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(car_drivers)
+[23.312s] INFO:colcon.colcon_core.shell:Creating package script '/root/Documents/robot/miniAGV/agv_ws/install/car_drivers/share/car_drivers/package.ps1'
+[23.319s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/Documents/robot/miniAGV/agv_ws/install/car_drivers/share/car_drivers/package.dsv'
+[23.324s] INFO:colcon.colcon_core.shell:Creating package script '/root/Documents/robot/miniAGV/agv_ws/install/car_drivers/share/car_drivers/package.sh'
+[23.330s] INFO:colcon.colcon_core.shell:Creating package script '/root/Documents/robot/miniAGV/agv_ws/install/car_drivers/share/car_drivers/package.bash'
+[23.337s] INFO:colcon.colcon_core.shell:Creating package script '/root/Documents/robot/miniAGV/agv_ws/install/car_drivers/share/car_drivers/package.zsh'
+[23.343s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/Documents/robot/miniAGV/agv_ws/install/car_drivers/share/colcon-core/packages/car_drivers)
+[23.371s] Level 1:colcon.colcon_core.environment:checking '/root/Documents/robot/miniAGV/agv_ws/install/control' for CMake module files
+[23.376s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/Documents/robot/miniAGV/agv_ws/src/control' returned '0': PYTHONPATH=/root/Documents/robot/miniAGV/agv_ws/build/control/prefix_override:/root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/control build --build-base /root/Documents/robot/miniAGV/agv_ws/build/control/build install --record /root/Documents/robot/miniAGV/agv_ws/build/control/install.log --install-scripts $base/lib/control --single-version-externally-managed
+[23.378s] Level 1:colcon.colcon_core.environment:checking '/root/Documents/robot/miniAGV/agv_ws/install/control' for CMake config files
+[23.381s] Level 1:colcon.colcon_core.environment:checking '/root/Documents/robot/miniAGV/agv_ws/install/control/lib'
+[23.382s] Level 1:colcon.colcon_core.environment:checking '/root/Documents/robot/miniAGV/agv_ws/install/control/bin'
+[23.383s] Level 1:colcon.colcon_core.environment:checking '/root/Documents/robot/miniAGV/agv_ws/install/control/lib/pkgconfig/control.pc'
+[23.384s] Level 1:colcon.colcon_core.environment:checking '/root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages'
+[23.385s] Level 1:colcon.colcon_core.shell:create_environment_hook('control', 'pythonpath')
+[23.402s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/Documents/robot/miniAGV/agv_ws/install/control/share/control/hook/pythonpath.ps1'
+[23.406s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/Documents/robot/miniAGV/agv_ws/install/control/share/control/hook/pythonpath.dsv'
+[23.410s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/Documents/robot/miniAGV/agv_ws/install/control/share/control/hook/pythonpath.sh'
+[23.415s] Level 1:colcon.colcon_core.environment:checking '/root/Documents/robot/miniAGV/agv_ws/install/control/bin'
+[23.416s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(control)
+[23.441s] INFO:colcon.colcon_core.shell:Creating package script '/root/Documents/robot/miniAGV/agv_ws/install/control/share/control/package.ps1'
+[23.446s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/Documents/robot/miniAGV/agv_ws/install/control/share/control/package.dsv'
+[23.451s] INFO:colcon.colcon_core.shell:Creating package script '/root/Documents/robot/miniAGV/agv_ws/install/control/share/control/package.sh'
+[23.455s] INFO:colcon.colcon_core.shell:Creating package script '/root/Documents/robot/miniAGV/agv_ws/install/control/share/control/package.bash'
+[23.458s] INFO:colcon.colcon_core.shell:Creating package script '/root/Documents/robot/miniAGV/agv_ws/install/control/share/control/package.zsh'
+[23.461s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/Documents/robot/miniAGV/agv_ws/install/control/share/colcon-core/packages/control)
+[23.463s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[23.465s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[23.466s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[23.467s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[23.514s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[23.515s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[23.516s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[23.516s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[23.537s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[23.554s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/Documents/robot/miniAGV/agv_ws/install/local_setup.ps1'
+[23.562s] INFO:colcon.colcon_core.shell:Creating prefix util module '/root/Documents/robot/miniAGV/agv_ws/install/_local_setup_util_ps1.py'
+[23.573s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/Documents/robot/miniAGV/agv_ws/install/setup.ps1'
+[23.606s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/Documents/robot/miniAGV/agv_ws/install/local_setup.sh'
+[23.611s] INFO:colcon.colcon_core.shell:Creating prefix util module '/root/Documents/robot/miniAGV/agv_ws/install/_local_setup_util_sh.py'
+[23.615s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/Documents/robot/miniAGV/agv_ws/install/setup.sh'
+[23.646s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/Documents/robot/miniAGV/agv_ws/install/local_setup.bash'
+[23.649s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/Documents/robot/miniAGV/agv_ws/install/setup.bash'
+[23.681s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/Documents/robot/miniAGV/agv_ws/install/local_setup.zsh'
+[23.686s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/Documents/robot/miniAGV/agv_ws/install/setup.zsh'

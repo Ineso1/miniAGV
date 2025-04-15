@@ -1,157 +1,128 @@
-# import rclpy
-# from rclpy.node import Node
-# from geometry_msgs.msg import Twist
-# from nav_msgs.msg import Odometry
-# from rclpy.qos import QoSProfile
-
-# class ControlNode(Node):
-#     def __init__(self):
-#         super().__init__('control_node')
-        
-#         qos_profile = QoSProfile(depth=10)
-#         self.subscription = self.create_subscription(
-#             Twist,
-#             '/vel_raw',
-#             self.vel_raw_callback,
-#             qos_profile
-#         )
-#         self.subscription  # prevent unused variable warning
-        
-#         self.odometry_publisher = self.create_publisher(
-#             Odometry,
-#             '/odometry',
-#             10  # alternatively, you can reuse a QoSProfile if desired
-#         )
-        
-#         timer_period = 1.0  # seconds
-#         self.timer = self.create_timer(timer_period, self.publish_odometry_callback)        
-#         self.current_position = [0.0, 0.0, 0.0]  # x, y, z
-
-#     def vel_raw_callback(self, msg: Twist):
-#         self.get_logger().info(
-#             f"Received Twist: linear=({msg.linear.x}, {msg.linear.y}, {msg.linear.z}), "
-#             f"angular=({msg.angular.x}, {msg.angular.y}, {msg.angular.z})"
-#         )
-
-#     def publish_odometry_callback(self):
-#         odom_msg = Odometry()
-        
-#         odom_msg.pose.pose.position.x = self.current_position[0]
-#         odom_msg.pose.pose.position.y = self.current_position[1]
-#         odom_msg.pose.pose.position.z = self.current_position[2]
-        
-#         self.odometry_publisher.publish(odom_msg)
-#         self.get_logger().info("Published odometry message.")
-
-# def main():
-#     print('Hi from control.')
-#     rclpy.init()
-#     control_node = ControlNode()
-#     rclpy.spin(control_node)
-#     rclpy.shutdown()
-
-# if __name__ == '__main__':
-#     main()
-
-
-
-
-
-
-
+#!/usr/bin/env python3
 
 import rclpy
-import numpy as np
 from rclpy.node import Node
-from std_msgs.msg import Float32, Float64
-from geometry_msgs.msg import Twist
+from geometry_msgs.msg import Pose2D, Twist
+from nav_msgs.msg import Odometry
+from transforms3d.euler import quat2euler
+import math
 
-class RoverController(Node):
+
+class PIDController:
+    def __init__(self, p, i, d, max_output, min_output):
+        self.p = p
+        self.i = i
+        self.d = d
+        self.max_output = max_output
+        self.min_output = min_output
+        self.integral_error = 0.0
+
+    def compute(self, pos_error, vel_error, dt):
+        if dt <= 0:
+            return 0.0
+
+        proportional = self.p * pos_error
+        self.integral_error += pos_error * dt
+        integral = self.i * self.integral_error
+        derivative = self.d * vel_error
+
+        output = proportional + integral + derivative
+        return max(min(output, self.max_output), self.min_output)
+
+
+class ControlNode(Node):
     def __init__(self):
-        super().__init__('controller_node')
+        super().__init__('control_node')
 
-        self.position_x = 0.0
-        self.position_y = 0.0
-        self.position_z = 0.0
+        # Subscribers
+        self.create_subscription(Pose2D, 'desired_pose', self.desired_pose_callback, 10)
+        self.create_subscription(Odometry, 'odom', self.odometry_callback, 10)
 
-        self.rot_x      = 0.0
-        self.rot_y      = 0.0
-        self.rot_z      = 0.0
+        # Publisher
+        self.cmd_vel_pub = self.create_publisher(Twist, 'cmd_vel', 10)
 
-        self.thetaeint = 0.0
+        # PID controllers
+        self.pid_x = PIDController(1.0, 0.0, 0.0, 1.0, -1.0)
+        self.pid_y = PIDController(1.0, 0.0, 0.0, 1.0, -1.0)
+        self.pid_theta = PIDController(2.0, 0.0, 0.1, 1.0, -1.0)
 
-        self.dt  = 0.01
+        # Internal state
+        self.current_pose = Pose2D()
+        self.current_twist = Twist()
+        self.desired_pose = None
+        self.desired_twist = Twist()
+        self.last_time = self.get_clock().now()
 
-        self.kpr = 3
-        self.kpt = 1
-        self.kir = 0.03
+    def odometry_callback(self, msg: Odometry):
+        pos = msg.pose.pose.position
+        ori = msg.pose.pose.orientation
 
-        self.pose_sub = self.create_subscription(Twist, "vel_raw", self.pose_callback, 10)
-        self.twist_pub = self.create_publisher(Twist, "/cmd_vel", 10)
-        self.posx_pub = self.create_publisher(Float64, "/positionx", 10)
-        self.posy_pub = self.create_publisher(Float64, "/positiony", 10)
-        self.angle_pub = self.create_publisher(Float32, "/anglecuh", 10)
+        # Use transforms3d to convert quaternion to yaw
+        yaw, _, _ = quat2euler([ori.w, ori.x, ori.y, ori.z])
 
-    def response_calc(self, pos_x, pos_y, curr_theta, xd, yd):
-        # Position control
-        x = pos_x
-        y = pos_y
-        theta = curr_theta
-        thetad = np.arctan2((yd-y), (xd-x))
+        self.current_pose.x = pos.x
+        self.current_pose.y = pos.y
+        self.current_pose.theta = yaw
+        self.current_twist = msg.twist.twist  # Use `.twist`, not entire msg
 
-        thetae = theta - thetad
-        if thetae > np.pi:
-            thetae = thetae - 2*np.pi
-        elif thetae < -np.pi:
-            thetae = thetae + 2*np.pi
-        #Thetae.append(thetae)
-        #Time.append(t)
+    def desired_pose_callback(self, msg: Pose2D):
+        self.desired_pose = msg
 
-        # PI controller for orientation
-        self.thetaeint += thetae*self.dt
-        w = -self.kpr*thetae - self.kir*self.thetaeint
+        # Zero desired velocities (pure position control)
+        self.desired_twist = Twist()
 
-        d = np.sqrt((xd-x)**2 + (yd-y)**2)
-        V = self.kpt *d
+        current_time = self.get_clock().now()
+        dt = (current_time - self.last_time).nanoseconds * 1e-9
+        if dt <= 0:
+            return
 
-        return V, w
+        # Calculate errors
+        error_x = self.desired_pose.x - self.current_pose.x
+        error_y = self.desired_pose.y - self.current_pose.y
+        error_theta = self.normalize_angle(self.desired_pose.theta - self.current_pose.theta)
 
-    def pose_callback(self, msg):
-        #get current linear speed and angular speed
-        velocidad_x = msg.linear.x
-        velocidad_y = msg.linear.y
-        omega = msg.angular.z
+        error_vx = self.desired_twist.linear.x - self.current_twist.linear.x
+        error_vy = self.desired_twist.linear.y - self.current_twist.linear.y
+        error_omega = self.desired_twist.angular.z - self.current_twist.angular.z
 
-        self.position_x += velocidad_x*self.dt
-        self.position_y += velocidad_y*self.dt
-        self.position_z = msg.linear.z
-        self.rot_x      = msg.angular.x
-        self.rot_y      = msg.angular.y
-        self.rot_z      += omega*self.dt
-        print(self.position_x)
-        vel, turn = self.response_calc(self.position_x, self.position_y, self.rot_z, 0.7,0.5)
+        # PID output
+        v_x = self.pid_x.compute(error_x, error_vx, dt)
+        v_y = self.pid_y.compute(error_y, error_vy, dt)
+        v_theta = self.pid_theta.compute(error_theta, error_omega, dt)
 
-        twist_msg = Twist()
-        #twist_msg.linear.x = vel
-        twist_msg.linear.x = np.clip(vel, -0.05, 0.05)
-        twist_msg.linear.y = 0.0
-        twist_msg.linear.z = 0.0
-        twist_msg.angular.x = 0.0
-        twist_msg.angular.y = 0.0
-        #twist_msg.angular.z = turn
-        twist_msg.angular.z = np.clip(turn, -0.05, 0.05)
+        # Publish Twist message
+        twist = Twist()
+        twist.linear.x = v_x
+        twist.linear.y = v_y
+        twist.angular.z = v_theta
+        self.cmd_vel_pub.publish(twist)
 
-        self.twist_pub.publish(twist_msg)
-        #self.posx_pub.publish(self.position_x)
-        #self.posy_pub.publish(self.position_y)
-        #self.angle_pub.publish(self.rot_z)
+        self.last_time = current_time
+
+        self.get_logger().info(
+            f"Pose error: x={self.current_pose.x:.2f}, y={self.current_pose.y:.2f}, theta={math.degrees(self.current_pose.theta):.2f}° "
+        )
+
+        # self.get_logger().info(
+        #     f"Pose error: x={error_x:.2f}, y={error_y:.2f}, theta={math.degrees(error_theta):.2f}° | "
+        #     f"cmd_vel: x={v_x:.2f}, y={v_y:.2f}, z={v_theta:.2f}"
+        # )
+
+    def normalize_angle(self, angle):
+        while angle > math.pi:
+            angle -= 2.0 * math.pi
+        while angle < -math.pi:
+            angle += 2.0 * math.pi
+        return angle
 
 
 def main(args=None):
-    print("Standing controller node")
     rclpy.init(args=args)
-    roverController = RoverController()
-    rclpy.spin(roverController)
+    node = ControlNode()
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()
 
-if __name__=='__main__':
+
+if __name__ == '__main__':
     main()

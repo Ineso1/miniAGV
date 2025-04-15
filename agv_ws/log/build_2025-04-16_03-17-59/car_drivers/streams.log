@@ -1,0 +1,21 @@
+[12.113s] Invoking command in '/root/Documents/robot/miniAGV/agv_ws/src/car_drivers': PYTHONPATH=/root/Documents/robot/miniAGV/agv_ws/build/car_drivers/prefix_override:/root/Documents/robot/miniAGV/agv_ws/install/car_drivers/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/car_drivers build --build-base /root/Documents/robot/miniAGV/agv_ws/build/car_drivers/build install --record /root/Documents/robot/miniAGV/agv_ws/build/car_drivers/install.log --install-scripts $base/lib/car_drivers --single-version-externally-managed
+[15.313s] running egg_info
+[15.332s] writing ../../build/car_drivers/car_drivers.egg-info/PKG-INFO
+[15.339s] writing dependency_links to ../../build/car_drivers/car_drivers.egg-info/dependency_links.txt
+[15.343s] writing entry points to ../../build/car_drivers/car_drivers.egg-info/entry_points.txt
+[15.354s] writing requirements to ../../build/car_drivers/car_drivers.egg-info/requires.txt
+[15.359s] writing top-level names to ../../build/car_drivers/car_drivers.egg-info/top_level.txt
+[15.681s] reading manifest file '../../build/car_drivers/car_drivers.egg-info/SOURCES.txt'
+[15.688s] writing manifest file '../../build/car_drivers/car_drivers.egg-info/SOURCES.txt'
+[15.692s] running build
+[15.693s] running build_py
+[15.694s] running install
+[15.699s] running install_lib
+[15.715s] running install_data
+[15.720s] running install_egg_info
+[15.734s] removing '/root/Documents/robot/miniAGV/agv_ws/install/car_drivers/lib/python3.8/site-packages/car_drivers-0.0.0-py3.8.egg-info' (and everything under it)
+[15.737s] Copying ../../build/car_drivers/car_drivers.egg-info to /root/Documents/robot/miniAGV/agv_ws/install/car_drivers/lib/python3.8/site-packages/car_drivers-0.0.0-py3.8.egg-info
+[15.744s] running install_scripts
+[15.899s] Installing move_drivers script to /root/Documents/robot/miniAGV/agv_ws/install/car_drivers/lib/car_drivers
+[15.901s] writing list of installed files to '/root/Documents/robot/miniAGV/agv_ws/build/car_drivers/install.log'
+[16.131s] Invoked command in '/root/Documents/robot/miniAGV/agv_ws/src/car_drivers' returned '0': PYTHONPATH=/root/Documents/robot/miniAGV/agv_ws/build/car_drivers/prefix_override:/root/Documents/robot/miniAGV/agv_ws/install/car_drivers/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/car_drivers build --build-base /root/Documents/robot/miniAGV/agv_ws/build/car_drivers/build install --record /root/Documents/robot/miniAGV/agv_ws/build/car_drivers/install.log --install-scripts $base/lib/car_drivers --single-version-externally-managed

@@ -1,0 +1,27 @@
+running egg_info
+writing ../../build/control/control.egg-info/PKG-INFO
+writing dependency_links to ../../build/control/control.egg-info/dependency_links.txt
+writing entry points to ../../build/control/control.egg-info/entry_points.txt
+writing requirements to ../../build/control/control.egg-info/requires.txt
+writing top-level names to ../../build/control/control.egg-info/top_level.txt
+reading manifest file '../../build/control/control.egg-info/SOURCES.txt'
+writing manifest file '../../build/control/control.egg-info/SOURCES.txt'
+running build
+running build_py
+copying control/controller.py -> /root/Documents/robot/miniAGV/agv_ws/build/control/build/lib/control
+copying control/odometry.py -> /root/Documents/robot/miniAGV/agv_ws/build/control/build/lib/control
+running install
+running install_lib
+copying /root/Documents/robot/miniAGV/agv_ws/build/control/build/lib/control/controller.py -> /root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages/control
+copying /root/Documents/robot/miniAGV/agv_ws/build/control/build/lib/control/odometry.py -> /root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages/control
+byte-compiling /root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages/control/controller.py to controller.cpython-38.pyc
+byte-compiling /root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages/control/odometry.py to odometry.cpython-38.pyc
+running install_data
+running install_egg_info
+removing '/root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages/control-0.0.0-py3.8.egg-info' (and everything under it)
+Copying ../../build/control/control.egg-info to /root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages/control-0.0.0-py3.8.egg-info
+running install_scripts
+Installing controller script to /root/Documents/robot/miniAGV/agv_ws/install/control/lib/control
+Installing odometry script to /root/Documents/robot/miniAGV/agv_ws/install/control/lib/control
+Installing trajectory script to /root/Documents/robot/miniAGV/agv_ws/install/control/lib/control
+writing list of installed files to '/root/Documents/robot/miniAGV/agv_ws/build/control/install.log'

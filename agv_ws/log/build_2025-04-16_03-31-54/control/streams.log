@@ -1,0 +1,26 @@
+[12.187s] Invoking command in '/root/Documents/robot/miniAGV/agv_ws/src/control': PYTHONPATH=/root/Documents/robot/miniAGV/agv_ws/build/control/prefix_override:/root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/control build --build-base /root/Documents/robot/miniAGV/agv_ws/build/control/build install --record /root/Documents/robot/miniAGV/agv_ws/build/control/install.log --install-scripts $base/lib/control --single-version-externally-managed
+[15.443s] running egg_info
+[15.448s] writing ../../build/control/control.egg-info/PKG-INFO
+[15.455s] writing dependency_links to ../../build/control/control.egg-info/dependency_links.txt
+[15.456s] writing entry points to ../../build/control/control.egg-info/entry_points.txt
+[15.457s] writing requirements to ../../build/control/control.egg-info/requires.txt
+[15.458s] writing top-level names to ../../build/control/control.egg-info/top_level.txt
+[15.804s] reading manifest file '../../build/control/control.egg-info/SOURCES.txt'
+[15.813s] writing manifest file '../../build/control/control.egg-info/SOURCES.txt'
+[15.814s] running build
+[15.816s] running build_py
+[15.818s] copying control/trajectory.py -> /root/Documents/robot/miniAGV/agv_ws/build/control/build/lib/control
+[15.819s] running install
+[15.825s] running install_lib
+[15.833s] copying /root/Documents/robot/miniAGV/agv_ws/build/control/build/lib/control/trajectory.py -> /root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages/control
+[15.840s] byte-compiling /root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages/control/trajectory.py to trajectory.cpython-38.pyc
+[15.853s] running install_data
+[15.856s] running install_egg_info
+[15.874s] removing '/root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages/control-0.0.0-py3.8.egg-info' (and everything under it)
+[15.876s] Copying ../../build/control/control.egg-info to /root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages/control-0.0.0-py3.8.egg-info
+[15.882s] running install_scripts
+[16.054s] Installing controller script to /root/Documents/robot/miniAGV/agv_ws/install/control/lib/control
+[16.062s] Installing odometry script to /root/Documents/robot/miniAGV/agv_ws/install/control/lib/control
+[16.063s] Installing trajectory script to /root/Documents/robot/miniAGV/agv_ws/install/control/lib/control
+[16.064s] writing list of installed files to '/root/Documents/robot/miniAGV/agv_ws/build/control/install.log'
+[16.384s] Invoked command in '/root/Documents/robot/miniAGV/agv_ws/src/control' returned '0': PYTHONPATH=/root/Documents/robot/miniAGV/agv_ws/build/control/prefix_override:/root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/control build --build-base /root/Documents/robot/miniAGV/agv_ws/build/control/build install --record /root/Documents/robot/miniAGV/agv_ws/build/control/install.log --install-scripts $base/lib/control --single-version-externally-managed

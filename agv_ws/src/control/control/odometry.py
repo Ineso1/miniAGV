@@ -2,32 +2,53 @@
 
 import rclpy
 from rclpy.node import Node
-from rclpy.clock import Clock
+from geometry_msgs.msg import Twist, Point, Quaternion
+from nav_msgs.msg import Odometry
+from transforms3d.euler import euler2quat
+import math
 
-from geometry_msgs.msg import Twist
-from SunriseRobotLib import SunriseRobot  # Hardware lib
 
 class OdometryNode(Node):
     def __init__(self):
         super().__init__('odometry_node')
 
-        self.car = SunriseRobot()
-        self.car.set_car_type(6)
-        self.car.create_receive_threading()
+        self.subscription = self.create_subscription(Twist, 'vel_raw', self.vel_callback, 50)
+        self.odom_pub = self.create_publisher(Odometry, 'odom', 50)
 
-        self.vel_publisher = self.create_publisher(Twist, 'vel_raw', 50)
-        self.create_timer(0.1, self.publish_velocity)
+        self.x = 0.0
+        self.y = 0.0
+        self.theta = 0.0
+        self.last_time = self.get_clock().now()
 
-    def publish_velocity(self):
-        vx, vy, angular = self.car.get_motion_data()
+    def vel_callback(self, msg: Twist):
+        current_time = self.get_clock().now()
+        dt = (current_time - self.last_time).nanoseconds * 1e-9
+        self.last_time = current_time
 
-        twist = Twist()
-        twist.linear.x = vx
-        twist.linear.y = vy
-        twist.angular.z = angular
+        vx = msg.linear.x
+        vy = msg.linear.y
+        vth = msg.angular.z
 
-        self.vel_publisher.publish(twist)
-        self.get_logger().debug(f'Published vel_raw: vx={vx}, vy={vy}, angular={angular}')
+        delta_x = (vx * math.cos(self.theta) - vy * math.sin(self.theta)) * dt
+        delta_y = (vx * math.sin(self.theta) + vy * math.cos(self.theta)) * dt
+        delta_theta = vth * dt
+
+        self.x += delta_x
+        self.y += delta_y
+        self.theta += delta_theta
+
+        q = euler2quat(0.0, 0.0, self.theta)
+
+        odom = Odometry()
+        odom.header.stamp = current_time.to_msg()
+        odom.header.frame_id = 'odom'
+        odom.child_frame_id = 'base_link'
+
+        odom.pose.pose.position = Point(x=self.x, y=self.y, z=0.0)
+        odom.pose.pose.orientation = Quaternion(x=q[1], y=q[2], z=q[3], w=q[0])
+        odom.twist.twist = msg
+
+        self.odom_pub.publish(odom)
 
 
 def main(args=None):
