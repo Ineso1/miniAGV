@@ -41,7 +41,6 @@ class MoveDrivers(Node):
         # Publishers
         self.EdiPublisher = self.create_publisher(Float32, "edition", 100)
         self.volPublisher = self.create_publisher(Float32, "voltage", 100)
-        self.velPublisher = self.create_publisher(Twist, "vel_raw", 50)
         self.imuPublisher = self.create_publisher(Imu, "imu/data_raw", 100)
         self.magPublisher = self.create_publisher(MagneticField, "imu/mag", 100)
 
@@ -72,7 +71,6 @@ class MoveDrivers(Node):
         now = Clock().now().to_msg()
 
         imu = Imu()
-        twist = Twist()
         battery = Float32()
         edition = Float32()
         mag = MagneticField()
@@ -83,7 +81,6 @@ class MoveDrivers(Node):
         ax, ay, az = self.car.get_accelerometer_data()
         gx, gy, gz = self.car.get_gyroscope_data()
         mx, my, mz = self.car.get_magnetometer_data()
-        vx, vy, angular = self.car.get_motion_data()
 
         # Accelerometer
         imu.header.stamp = now
@@ -104,16 +101,10 @@ class MoveDrivers(Node):
         mag.magnetic_field.y = my
         mag.magnetic_field.z = mz
 
-        # Velocity
-        twist.linear.x = vx
-        twist.linear.y = vy
-        twist.angular.z = angular
-
         self.EdiPublisher.publish(edition)
         self.volPublisher.publish(battery)
         self.imuPublisher.publish(imu)
         self.magPublisher.publish(mag)
-        self.velPublisher.publish(twist)
 
 
 def main(args=None):
@@ -122,3 +113,7 @@ def main(args=None):
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
