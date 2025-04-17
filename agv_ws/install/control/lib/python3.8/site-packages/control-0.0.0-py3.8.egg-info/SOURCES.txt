@@ -11,6 +11,7 @@ setup.py
 control/__init__.py
 control/controller.py
 control/odometry.py
+control/soft_trajectory_generator.py
 control/trajectory.py
 resource/control
 test/test_copyright.py

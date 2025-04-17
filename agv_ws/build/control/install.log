@@ -1,8 +1,10 @@
 /root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages/control/controller.py
+/root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages/control/soft_trajectory_generator.py
 /root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages/control/odometry.py
 /root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages/control/trajectory.py
 /root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages/control/__init__.py
 /root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages/control/__pycache__/controller.cpython-38.pyc
+/root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages/control/__pycache__/soft_trajectory_generator.cpython-38.pyc
 /root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages/control/__pycache__/odometry.cpython-38.pyc
 /root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages/control/__pycache__/trajectory.cpython-38.pyc
 /root/Documents/robot/miniAGV/agv_ws/install/control/lib/python3.8/site-packages/control/__pycache__/__init__.cpython-38.pyc

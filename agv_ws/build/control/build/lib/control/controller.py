@@ -118,9 +118,6 @@ class ControlNode(Node):
         vx_body = v_x * math.cos(self.current_pose.theta) + v_x * math.sin(self.current_pose.theta)
         vy_body = -v_x * math.sin(self.current_pose.theta) + v_y * math.cos(self.current_pose.theta)
 
-        # vx_body = 0.0
-        # vy_body = 0.0
-
         # Publish command
         twist = Twist()
         twist.linear.x = vx_body

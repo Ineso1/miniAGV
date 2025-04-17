@@ -3,9 +3,11 @@
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Pose2D
+from datetime import datetime
 import csv
 import os
-from datetime import datetime
+
+from .soft_trajectory_generator import SoftTrajectoryGenerator
 
 
 class TrajectoryNode(Node):
@@ -13,18 +15,22 @@ class TrajectoryNode(Node):
         super().__init__('trajectory_node')
 
         self.pose_pub = self.create_publisher(Pose2D, 'desired_pose', 10)
-        self.timer = self.create_timer(0.5, self.publish_desired_pose)
+        self.timer = self.create_timer(0.1, self.publish_desired_pose)  # 10Hz
 
-        # Desired pose
-        self.x = 0.0
-        self.y = 0.5
-        self.theta = 1.57  # ~90 degrees
+        # Initialize trajectory generator
+        self.softTrajectory = SoftTrajectoryGenerator()
 
-        # CSV logging flag
+        # Add waypoints: [x, y, theta]
+        self.softTrajectory.addWaypoint([0.0, 0.0, 0.0], 0)
+        self.softTrajectory.addWaypoint([0.0, 0.5, 0.0], 5)
+        self.softTrajectory.addWaypoint([0.5, 0.5, 1.57], 10)
+
+        self.softTrajectory.generateTrajectories()
+
+        # CSV logging setup
         self.enable_csv_logging = True
-
         if self.enable_csv_logging:
-            log_dir = '/root/Documents/robot/miniAGV/agv_ws/data'
+            log_dir = '/root/Documents/robot/miniAGV/agv_ws/data'  # Same as OdometryNode
             os.makedirs(log_dir, exist_ok=True)
             timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
             self.csv_file_path = os.path.join(log_dir, f'trajectory_log_{timestamp}.csv')
@@ -34,19 +40,20 @@ class TrajectoryNode(Node):
             self.get_logger().info(f"Logging trajectory to: {self.csv_file_path}")
 
     def publish_desired_pose(self):
-        pose_msg = Pose2D()
-        pose_msg.x = self.x
-        pose_msg.y = self.y
-        pose_msg.theta = self.theta
+        dt = 0.1
+        position, _ = self.softTrajectory.getNextState(dt)
 
+        pose_msg = Pose2D()
+        pose_msg.x = float(position[0])
+        pose_msg.y = float(position[1])
+        pose_msg.theta = float(position[2])
         self.pose_pub.publish(pose_msg)
 
+        # Log to CSV if enabled
         if self.enable_csv_logging:
-            self.csv_writer.writerow([self.x, self.y, self.theta])
+            self.csv_writer.writerow([pose_msg.x, pose_msg.y, pose_msg.theta])
             self.csv_file.flush()
-
-        # Optional debug output
-        # self.get_logger().info(f"Publishing desired_pose: x={self.x}, y={self.y}, theta={self.theta}")
+            print(f"Logged: x={pose_msg.x}, y={pose_msg.y}, theta={pose_msg.theta}")  # Debug print
 
     def destroy_node(self):
         if self.enable_csv_logging:
@@ -55,13 +62,11 @@ class TrajectoryNode(Node):
 
 
 def main(args=None):
-    print('Starting trajectory node...')
     rclpy.init(args=args)
     node = TrajectoryNode()
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()
-    print('Shutting down trajectory node.')
 
 
 if __name__ == '__main__':

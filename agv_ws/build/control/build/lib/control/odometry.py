@@ -21,7 +21,7 @@ class OdometryNode(Node):
 
         self.x = 0.0
         self.y = 0.0
-        self.theta = 1.57
+        self.theta = 0.0
         self.last_time = self.get_clock().now()
 
         # Flag to enable or disable CSV logging
