@@ -22,8 +22,13 @@ class TrajectoryNode(Node):
 
         # Add waypoints: [x, y, theta]
         self.softTrajectory.addWaypoint([0.0, 0.0, 0.0], 0)
-        self.softTrajectory.addWaypoint([0.0, 0.5, 0.0], 5)
-        self.softTrajectory.addWaypoint([0.5, 0.5, 1.57], 10)
+        self.softTrajectory.addWaypoint([0.78, 0.0, 0.0], 5)
+        self.softTrajectory.addWaypoint([0.78, -1.20, 0.0], 10)
+        self.softTrajectory.addWaypoint([1.78, -1.20, 1.57], 15)
+        self.softTrajectory.addWaypoint([1.78, -0.70, 0.0], 20)
+        self.softTrajectory.addWaypoint([0.0, 0.0, 0.0], 28)
+
+
 
         self.softTrajectory.generateTrajectories()
 

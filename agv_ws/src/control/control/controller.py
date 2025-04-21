@@ -58,9 +58,9 @@ class ControlNode(Node):
         self.cmd_vel_pub = self.create_publisher(Twist, 'cmd_vel', 10)
 
         # PID controllers
-        self.pid_x = PIDController(1.0, 0.0, 0.0, 1.0, -1.0)
-        self.pid_y = PIDController(1.0, 0.0, 0.0, 1.0, -1.0)
-        self.pid_theta = PIDController(2.0, 0.0, 0.0, 1.0, -1.0)
+        self.pid_x = PIDController(2.5, 0.4, 0.2, 1.0, -1.0)
+        self.pid_y = PIDController(2.5, 0.4, 0.2, 1.0, -1.0)
+        self.pid_theta = PIDController(3.5, 0.3, 0.2, 1.0, -1.0)
 
         # Internal state
         self.current_pose = Pose2D()
@@ -72,6 +72,9 @@ class ControlNode(Node):
         # Threshold
         self.xy_threshold = 0.01
         self.theta_threshold = 0.01
+
+        # Timer for control loop (e.g. 20 ms -> 50 Hz)
+        self.control_timer = self.create_timer(0.02, self.control_loop)
 
     def odometry_callback(self, msg: Odometry):
         pos = msg.pose.pose.position
@@ -87,6 +90,10 @@ class ControlNode(Node):
     def desired_pose_callback(self, msg: Pose2D):
         self.desired_pose = msg
         self.desired_twist = Twist()
+
+    def control_loop(self):
+        if self.desired_pose is None:
+            return  # Don't control until we have a desired pose
 
         current_time = self.get_clock().now()
         dt = (current_time - self.last_time).nanoseconds * 1e-9
@@ -115,7 +122,7 @@ class ControlNode(Node):
         if abs(error_theta) < self.theta_threshold:
             v_theta = 0.0
 
-        vx_body = v_x * math.cos(self.current_pose.theta) + v_x * math.sin(self.current_pose.theta)
+        vx_body = v_x * math.cos(self.current_pose.theta) + v_y * math.sin(self.current_pose.theta)
         vy_body = -v_x * math.sin(self.current_pose.theta) + v_y * math.cos(self.current_pose.theta)
 
         # Publish command
@@ -130,7 +137,6 @@ class ControlNode(Node):
             self.csv_writer.writerow([error_x, error_y, error_theta, v_x, v_y, v_theta])
             self.csv_file.flush()
 
-        # Optional logging (only shows current pose for now)
         self.get_logger().info(
             f"Pose: x={self.current_pose.x:.2f}, y={self.current_pose.y:.2f}, θ={math.degrees(self.current_pose.theta):.2f}°"
         )

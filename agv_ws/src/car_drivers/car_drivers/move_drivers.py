@@ -119,9 +119,15 @@ class MoveDrivers(Node):
 def main(args=None):
     rclpy.init(args=args)
     node = MoveDrivers()
-    rclpy.spin(node)
-    node.destroy_node()
-    rclpy.shutdown()
+
+    try:
+        rclpy.spin(node)
+    finally:
+        # Stop the robot before shutting down
+        node.get_logger().info("Shutting down, stopping robot...")
+        node.car.set_car_motion(0.0, 0.0, 0.0)
+        node.destroy_node()
+        rclpy.shutdown()
 
 
 if __name__ == '__main__':
