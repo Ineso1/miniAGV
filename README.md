@@ -1,4 +1,4 @@
-# Scripts
+# How to run this project
 
 This project is designed for **mini Automated Guided Vehicles (miniAGV)**. The following commands allow you to set up, run, and generate documentation for the project.
 
