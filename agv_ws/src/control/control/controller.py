@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
 
+##
+# @file controller.py
+# @brief ROS2 Control Node using PID controllers for miniAGV
+# @author Your Name
+# @date 2025-04-22
+
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Pose2D, Twist
@@ -11,7 +17,17 @@ import os
 from datetime import datetime
 
 
+##
+# @class PIDController
+# @brief Implements a basic PID controller
 class PIDController:
+    ##
+    # @brief Constructor for PIDController
+    # @param p Proportional gain
+    # @param i Integral gain
+    # @param d Derivative gain
+    # @param max_output Maximum control output
+    # @param min_output Minimum control output
     def __init__(self, p, i, d, max_output, min_output):
         self.p = p
         self.i = i
@@ -20,6 +36,12 @@ class PIDController:
         self.min_output = min_output
         self.integral_error = 0.0
 
+    ##
+    # @brief Compute the control output using PID formula
+    # @param pos_error Position error
+    # @param vel_error Velocity error
+    # @param dt Time step
+    # @return Clamped control output
     def compute(self, pos_error, vel_error, dt):
         if dt <= 0:
             return 0.0
@@ -33,7 +55,12 @@ class PIDController:
         return max(min(output, self.max_output), self.min_output)
 
 
+##
+# @class ControlNode
+# @brief ROS2 Node implementing a PID-based motion controller
 class ControlNode(Node):
+    ##
+    # @brief Constructor for ControlNode
     def __init__(self):
         super().__init__('control_node')
 
@@ -69,13 +96,16 @@ class ControlNode(Node):
         self.desired_twist = Twist()
         self.last_time = self.get_clock().now()
 
-        # Threshold
+        # Thresholds
         self.xy_threshold = 0.01
         self.theta_threshold = 0.01
 
-        # Timer for control loop (e.g. 20 ms -> 50 Hz)
+        # Timer for control loop (50 Hz)
         self.control_timer = self.create_timer(0.02, self.control_loop)
 
+    ##
+    # @brief Callback for odometry updates
+    # @param msg Odometry message
     def odometry_callback(self, msg: Odometry):
         pos = msg.pose.pose.position
         ori = msg.pose.pose.orientation
@@ -87,10 +117,15 @@ class ControlNode(Node):
         self.current_twist.linear = msg.twist.twist.linear
         self.current_twist.angular = msg.twist.twist.angular
 
+    ##
+    # @brief Callback for desired pose updates
+    # @param msg Desired pose message
     def desired_pose_callback(self, msg: Pose2D):
         self.desired_pose = msg
         self.desired_twist = Twist()
 
+    ##
+    # @brief Main control loop callback
     def control_loop(self):
         if self.desired_pose is None:
             return  # Don't control until we have a desired pose
@@ -143,6 +178,10 @@ class ControlNode(Node):
 
         self.last_time = current_time
 
+    ##
+    # @brief Normalize an angle to [-π, π]
+    # @param angle Angle in radians
+    # @return Normalized angle
     def normalize_angle(self, angle):
         while angle > math.pi:
             angle -= 2.0 * math.pi
@@ -150,12 +189,17 @@ class ControlNode(Node):
             angle += 2.0 * math.pi
         return angle
 
+    ##
+    # @brief Custom cleanup on node destruction
     def destroy_node(self):
         if self.enable_csv_logging:
             self.csv_file.close()
         super().destroy_node()
 
 
+##
+# @brief Main entry point
+# @param args Command line arguments
 def main(args=None):
     rclpy.init(args=args)
     node = ControlNode()

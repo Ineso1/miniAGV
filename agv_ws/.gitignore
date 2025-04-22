@@ -2,6 +2,9 @@
 /build/
 /log/
 /install/
+/html/
+/latex/
+
 
 # Ignore IDE configurations
 .vscode/
