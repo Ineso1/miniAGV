@@ -3,7 +3,7 @@
 ##
 # @file controller.py
 # @brief ROS2 Control Node using PID controllers for miniAGV
-# @author Your Name
+# @author eq1
 # @date 2025-04-22
 
 import rclpy
