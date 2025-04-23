@@ -1,4 +1,5 @@
 [console_scripts]
+circle_trajectory = control.circle_trajectory:main
 controller = control.controller:main
 odometry = control.odometry:main
 trajectory = control.trajectory:main

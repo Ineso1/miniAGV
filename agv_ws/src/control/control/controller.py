@@ -85,8 +85,8 @@ class ControlNode(Node):
         self.cmd_vel_pub = self.create_publisher(Twist, 'cmd_vel', 10)
 
         # PID controllers
-        self.pid_x = PIDController(2.5, 0.4, 0.2, 1.0, -1.0)
-        self.pid_y = PIDController(2.5, 0.4, 0.2, 1.0, -1.0)
+        self.pid_x = PIDController(1.5, 0.4, 0.2, 1.0, -1.0)
+        self.pid_y = PIDController(1.5, 0.4, 0.2, 1.0, -1.0)
         self.pid_theta = PIDController(3.5, 0.3, 0.2, 1.0, -1.0)
 
         # Internal state

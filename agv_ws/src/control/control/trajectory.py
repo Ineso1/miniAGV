@@ -49,10 +49,10 @@ class TrajectoryNode(Node):
         # Add waypoints for trajectory generation (position [x, y, theta], and time in seconds)
         self.softTrajectory.addWaypoint([0.0, 0.0, 0.0], 0)
         self.softTrajectory.addWaypoint([0.78, 0.0, 0.0], 5)
-        self.softTrajectory.addWaypoint([0.78, -1.20, 0.0], 10)
-        self.softTrajectory.addWaypoint([1.78, -1.20, 1.57], 15)
-        self.softTrajectory.addWaypoint([1.78, -0.70, 0.0], 20)
-        self.softTrajectory.addWaypoint([0.0, 0.0, 0.0], 28)
+        self.softTrajectory.addWaypoint([0.78, 0.78, 0.0], 10)
+        self.softTrajectory.addWaypoint([0.0, 0.78, 0.0], 15)
+        self.softTrajectory.addWaypoint([0.0, 0.0, 0.0], 20)
+        self.softTrajectory.addWaypoint([0.78, 0.0, 0.0], 28)
 
         # Generate the trajectory using the specified waypoints
         self.softTrajectory.generateTrajectories()

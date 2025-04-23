@@ -22,7 +22,8 @@ setup(
         'console_scripts': [
             'controller = control.controller:main',
             'odometry = control.odometry:main',
-            'trajectory = control.trajectory:main'            
+            'trajectory = control.trajectory:main',      
+            'circle_trajectory = control.circle_trajectory:main'            
         ],
     },
 )

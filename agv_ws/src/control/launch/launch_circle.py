@@ -37,8 +37,8 @@ def generate_launch_description():
         ),
         Node(
             package='control',
-            executable='trajectory',
-            name='trajectory',
+            executable='circle_trajectory',
+            name='circle_trajectory',
             # output='screen',
-        ),
+        )
     ])
