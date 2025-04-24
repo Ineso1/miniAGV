@@ -1,0 +1,3 @@
+
+CustomVector3 position
+CustomVector3 velocity

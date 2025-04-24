@@ -3,7 +3,7 @@
 ##
 # @file controller.py
 # @brief ROS2 Control Node using PID controllers for miniAGV
-# @author Your Name
+# @author eq1
 # @date 2025-04-22
 
 import rclpy
@@ -15,6 +15,8 @@ import math
 import csv
 import os
 from datetime import datetime
+
+from paselbat_interfaces.msg import CustomPoseMsg
 
 
 ##
@@ -80,9 +82,10 @@ class ControlNode(Node):
         # Subscribers
         self.create_subscription(Pose2D, 'desired_pose', self.desired_pose_callback, 10)
         self.create_subscription(Odometry, 'odom', self.odometry_callback, 10)
-
+        
         # Publisher
         self.cmd_vel_pub = self.create_publisher(Twist, 'cmd_vel', 10)
+        self.custom_pos_pub = self.create_publisher(CustomPoseMsg, 'posecustom', 10)
 
         # PID controllers
         self.pid_x = PIDController(1.5, 0.4, 0.2, 1.0, -1.0)
@@ -166,6 +169,10 @@ class ControlNode(Node):
         twist.linear.y = vy_body
         twist.angular.z = v_theta
         self.cmd_vel_pub.publish(twist)
+
+        custompose = CustomPoseMsg()
+        custompose.position.x = vx_body
+        self.custom_pos_pub.publish(custompose)
 
         # Log to CSV if enabled
         if self.enable_csv_logging:
