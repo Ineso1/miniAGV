@@ -7,6 +7,8 @@ from datetime import datetime
 import csv
 import os
 
+import math
+
 from .soft_trajectory_generator import SoftTrajectoryGenerator
 
 
@@ -83,9 +85,13 @@ class TrajectoryNode(Node):
 
         # Create a Pose2D message to store the robot's desired pose
         pose_msg = Pose2D()
-        pose_msg.x = float(position[0])
-        pose_msg.y = float(position[1])
-        pose_msg.theta = float(position[2])
+        # pose_msg.x = float(position[0])
+        # pose_msg.y = float(position[1])
+        # pose_msg.theta = float(position[2])
+
+        pose_msg.x = float(0.0)
+        pose_msg.y = float(0.0)
+        pose_msg.theta = float(math.pi/2)
 
         # Publish the pose message to the 'desired_pose' topic
         self.pose_pub.publish(pose_msg)

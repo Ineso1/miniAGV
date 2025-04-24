@@ -14,6 +14,7 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         (os.path.join('share', package_name, 'msg'), glob('msg/*.msg')),
+        (os.path.join('share', package_name, 'params'), glob('params/*.yaml')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -30,5 +31,4 @@ setup(
             'circle_trajectory = control.circle_trajectory:main'            
         ],
     },
-    rosidl_modules=['msg']
 )

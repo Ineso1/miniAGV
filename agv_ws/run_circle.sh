@@ -53,7 +53,7 @@ echo -e "${GREEN} All good!${NC}"
 
 # === Step 3: Build ===
 echo -ne "${BLUE}🔧 Building workspace with colcon...${NC}"
-colcon build --parallel-workers 12 & spinner
+colcon build --parallel-workers 12
 echo -e "${GREEN} Build completed!${NC}"
 
 # === Step 4: Source setup ===

@@ -32,7 +32,7 @@ class CircleTrajectoryNode(Node):
 
 
         self.pose_pub.publish(pose_msg)
-        self.get_logger().info(f"Publicando: x={pose_msg.x:.2f}, y={pose_msg.y:.2f}, theta={pose_msg.theta:.2f}")
+        # self.get_logger().info(f"Publicando: x={pose_msg.x:.2f}, y={pose_msg.y:.2f}, theta={pose_msg.theta:.2f}")
 
 def main(args=None):
     rclpy.init(args=args)

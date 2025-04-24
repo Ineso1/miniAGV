@@ -11,6 +11,10 @@ from std_msgs.msg import Int32, Bool, UInt8MultiArray
 from geometry_msgs.msg import Twist
 from sensor_msgs.msg import Imu, MagneticField
 
+import os
+import csv
+from datetime import datetime
+
 
 class MoveDrivers(Node):
     """
@@ -82,6 +86,20 @@ class MoveDrivers(Node):
 
         # Timer to periodically publish sensor data
         self.create_timer(0.1, self.pub_data)
+
+        # IMU CSV Logging
+        self.enable_imu_logging = True
+        if self.enable_imu_logging:
+            log_dir = '/root/Documents/robot/miniAGV/agv_ws/data'
+            os.makedirs(log_dir, exist_ok=True)
+            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+            self.imu_csv_path = os.path.join(log_dir, f'imu_log_{timestamp}.csv')
+            self.imu_csv_file = open(self.imu_csv_path, mode='w', newline='')
+            self.imu_csv_writer = csv.writer(self.imu_csv_file)
+            self.imu_csv_writer.writerow(['time', 'lin_acc_x', 'lin_acc_y', 'lin_acc_z',
+                                          'ang_vel_x', 'ang_vel_y', 'ang_vel_z'])
+
+            self.get_logger().info(f'Logging IMU data to: {self.imu_csv_path}')
 
     def cmd_vel_callback(self, msg):
         """
@@ -187,6 +205,14 @@ class MoveDrivers(Node):
         # Publish the velocity data
         self.odomPublisher.publish(twist)
 
+        # Log IMU data
+        if self.enable_imu_logging:
+            self.imu_csv_writer.writerow([
+                -ax, az, ay,            # Linear acceleration
+                -gx, gz, gy             # Angular velocity
+            ])
+            self.imu_csv_file.flush()
+
 
 def main(args=None):
     """
@@ -209,6 +235,8 @@ def main(args=None):
         node.car.set_car_motion(0.0, 0.0, 0.0)  # Stop the robot
         node.destroy_node()  # Cleanup the node
         rclpy.shutdown()  # Shutdown the ROS 2 client library
+        if node.enable_imu_logging:
+            node.imu_csv_file.close()
 
 if __name__ == '__main__':
     main()
