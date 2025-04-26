@@ -1,0 +1,5 @@
+geometry_msgs/Vector3 position
+geometry_msgs/Vector3 velocity
+geometry_msgs/Vector3 acceleration
+float64 angular_velocity_z
+float64 angular_acceleration_z
